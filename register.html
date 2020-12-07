@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>贪玩蓝月</title>
+    <!--防止index.html被浏览器缓存--begin-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!--防止index.html被浏览器缓存--over-->
+
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <link href="./assets/css/common/common.css" rel="stylesheet">
+    <link href="./assets/css/custom/forget.css" rel="stylesheet">
+    <script src="./assets/js/common/jquery.min.js"></script>
+    <script src="./assets/js/common/md5.min.js"></script>
+    <script src="./assets/js/custom/loading.min.js"></script>
+    
+<body>
+    <div class="main">
+        <div class="block">
+            <div class="top">
+                <img src="./assets/images/icon/font/quick-register.png" class="login-block block_top block_title" />
+                <a href="./login.html"><img src="./assets/images/room/close.png" class="close-img"></a>
+            </div>
+            <div class="center">
+            </div>
+            <div class="bottom">
+            </div>
+        </div>
+        <div class="row">
+            <img src="assets/images/input/1.png" alt="账号" />
+            <input class="txt-input txt-account" type="text" placeholder="请输入账号" id="acount" onblur="check_code()" />
+        </div>
+        <div class="row">
+            <img src="assets/images/input/1.png" alt="密码" />
+            <input class="txt-input txt-password" type="password" placeholder="请输入密码" id="exdata"
+                onblur="check_pwd()" />
+        </div>
+
+        <div class="row">
+            <a href="./room.html">
+                <img src="assets/images/login/select.png" class="select-room-img" />
+                <div class="select-room" type="text">
+                    <i class="icon round red"></i>
+                    <span class="room-name" id='serverName'>联盟</span>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <span id="code_msg" style=" text-align: center;">* 6-10位字母、数字、下划线 </span>
+        </div>
+        <div class="row">
+            <button type="button" onclick="javascript:button_onclick();" class="start-game-button">
+                <img src="assets/images/login/start.png" class="start-game" />
+                <img src="assets/images/icon/font/register.png" class="start-game-name" />
+            </button>
+        </div>
+
+
+    </div>
+
+    <script src="./assets/js/custom/register.min.js"></script>
+</body>
+
+</html>

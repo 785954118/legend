@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="paySkin" width="580" height="930" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="16ea0914746" ></w:Config>
+
+	<e:Rect id="bgClose0" fillAlpha="1" fillColor="0xF0EFF4" strokeColor="0xFFFFFF" horizontalCenter="0" verticalCenter="0" width="580" top="0" bottom="0"/>
+	<e:Group horizontalCenter="4.5" verticalCenter="-4" width="527" height="780">
+		<e:Image source="payPanel_json.Rounded Rectangle_1_png" anchorOffsetX="0" width="522" anchorOffsetY="0" height="172" horizontalCenter="-2.5" verticalCenter="-304"/>
+		<e:Image source="payPanel_json.Rounded Rectangle_1_png" anchorOffsetX="0" width="519" anchorOffsetY="0" height="54" verticalCenter="363" horizontalCenter="1"/>
+		<e:Image source="payPanel_json.Rounded Rectangle_2_png" anchorOffsetX="0" width="525" anchorOffsetY="0" height="303" verticalCenter="-18.5" horizontalCenter="-1"/>
+		<e:Label text="商品名称:" textColor="0x000040" size="25" bold="true" left="38" verticalCenter="-336.5"/>
+		<e:Label text="需支付金额:" textColor="0x000040" size="25" bold="true" left="38" verticalCenter="-266.5"/>
+		<e:Label text="支付方式：" textColor="0x000040" size="30" bold="true" left="36" verticalCenter="-138"/>
+		<e:Label text="已经有点卡？在这里输入点卡：" size="25" bold="true" left="2" verticalCenter="311.5" textColor="0x686868"/>
+		<e:Label id="yuanbaoNum" text="100元宝" textColor="0x000040" size="25" bold="true" textAlign="right" horizontalCenter="22" verticalCenter="-336.5"/>
+		<e:Label id="moneyNum" text="100元" size="30" textAlign="left" bold="true" textColor="0xe8833e" horizontalCenter="16" verticalCenter="-267"/>
+		<e:Label id="jihuoBtn" text="激活" size="25" textAlign="left" bold="true" textColor="0xE8833E" y="739" x="458"/>
+
+
+
+		<e:Image id="payBtn" source="payPanel_json.pay immediately_icon_png" x="-2" y="554" anchorOffsetX="0" width="529" anchorOffsetY="0" height="62"/>
+		<e:TextInput id="input" width="418" height="44" x="14" y="729" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" textColor="0x000000"/>
+		<e:Scroller scrollPolicyV="on" scrollPolicyH="off" horizontalCenter="0" height="200" verticalCenter="0" width="430">
+			<e:TabBar id="tab" width="430" height="200" scaleX="1" scaleY="1" y="0" x="6" itemRendererSkinName="payItem">
+			<e:layout>
+				<e:VerticalLayout gap="20"/>
+			</e:layout>
+			</e:TabBar>
+		</e:Scroller>
+
+	</e:Group>
+
+
+	<e:Image id="bgClose" anchorOffsetX="0" width="18" anchorOffsetY="0" height="33" horizontalCenter="-253" verticalCenter="-424.5" source="return_icon_png"/>
+	<e:Button id="closeBtn" label="关闭" skinName="Btn3Skin" horizontalCenter="0" verticalCenter="423"/>
+</e:Skin>

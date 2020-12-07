@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BtnCityMonster" width="136" height="145" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image anchorOffsetX="0" width="100" anchorOffsetY="0" height="111.54" horizontalCenter="0" verticalCenter="0" source="new_zjm_json.new_gsgcbg"/>
+	<e:Image id="monHead" horizontalCenter="0" source="monhead10073_png" width="51" height="51" y="57"/>
+	<e:Image horizontalCenter="0" verticalCenter="0" source="new_zjm_json.new_gsgcbg2"/>
+	<e:Image id="process" verticalCenter="0" source="new_zjm_json.new_gsgcjindutiao" width="100" height="109" x="18"/>
+	<e:Image id="redPoint" y="4" source="zjmhongdian" x="102"/>
+</e:Skin>

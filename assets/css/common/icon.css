@@ -1,0 +1,48 @@
+.icon{
+    width: auto;
+    height: auto;
+    min-width: 16px;
+    min-height: 16px;
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.icon.round {
+    min-width: 16px;
+    min-height: 16px;
+}
+
+.round.red {
+    background-image: url(../../images/icon/round/red.png);
+}
+
+.round.green {
+    background-image: url(../../images/icon/round/green.png);
+}
+
+.round.yellow {
+    background-image: url(../../images/icon/round/yellow.png);
+}
+
+.icon.font {
+    min-width: 29px;
+    min-height: 34px;
+}
+
+.font.hot {
+    background-image: url(../../images/icon/font/fire.png);
+}
+
+.font.boom {
+    background-image: url(../../images/icon/font/boom.png);
+}
+
+.font.maintain {
+    background-image: url(../../images/icon/font/maintain.png);
+}
+.font.new {
+    background-image: url(../../images/icon/font/new.png);
+}

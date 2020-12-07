@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="YBguangbo" width="578" height="930" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="group1" horizontalCenter="1" x="150" scaleX="1" scaleY="1" height="50" bottom="313" anchorOffsetY="0" visible="false">
+		<e:Image source="zhuangban_json.new_juese_zhuangban_itembg" x="0" y="3" anchorOffsetX="0" width="434" anchorOffsetY="0" height="48"/>
+		<e:Label id="content" text="某某回收装备获得100元宝" left="17" verticalCenter="0" size="20" textColor="0xe8b96d" bold="true"/>
+		<e:Label id="huishou" text="我要回收！" verticalCenter="0" size="22" textColor="0x27ff05" right="10" width="114" bold="true" anchorOffsetX="0"/>
+	</e:Group>
+	<e:Group id="group2" horizontalCenter="1" x="150" scaleX="1" scaleY="1" height="50" bottom="259" anchorOffsetY="0" visible="false">
+		<e:Image source="zhuangban_json.new_juese_zhuangban_itembg" anchorOffsetX="0" width="434" anchorOffsetY="0" height="49" horizontalCenter="0" bottom="-1"/>
+		<e:Label text="某某回收装备获得100元宝" left="17" verticalCenter="0.5" size="20" id="content0" textColor="0xe8b96d" bold="true"/>
+		<e:Label text="我要回收！" verticalCenter="0.5" size="22" textColor="0x27FF05" right="10" width="114" bold="true" anchorOffsetX="0" id="huishou0"/>
+	</e:Group>
+</e:Skin>

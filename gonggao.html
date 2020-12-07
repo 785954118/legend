@@ -1,0 +1,156 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>优优传奇</title>
+    <!--防止index.html被浏览器缓存--begin-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <!--防止index.html被浏览器缓存--over-->
+
+
+
+
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="./assets/css/common/common.css" rel="stylesheet">
+    <link href="./assets/css/custom/login.css" rel="stylesheet">
+
+
+<body>
+    <div class="main">
+        <div class="block" id='gonggaoimg'>
+            <div class="top">
+                <img src="./assets/images/icon/font/gonggaotitle.png" class="login-block block_top block_title"
+                    style="margin-top: 8px;margin-left: 35px;" />
+                <img src="./assets/images/room/close.png" class="close-img" id='gonggaoclose'>
+            </div>
+            <div class="center">
+            </div>
+            <div class="bottom">
+            </div>
+        </div>
+
+        <div id='gonggaomb' class="row" style="height: 250px;width: 300px;text-align: center;position: relative">
+            <div class="swiper-container" style="height: 100%; width: 100%;overflow: hidden;" id="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="scroller">
+                        <div style="word-break:break-word;color: floralwhite" id='p1'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./assets/js/common/swiper.min.js"></script>
+    <script>
+        document.getElementById('gonggaoclose').onclick = (function () {
+            window.history.go(-1);
+        })
+        var head = document.getElementsByTagName('head')[0];
+        // 加载info
+        var script0 = document.createElement('script');
+        script0.type = 'text/javascript';
+        script0.onload = function () {
+            var paramObj = {
+                httpUrl: info.get_gonggao_address,
+                type: 'post',
+            }
+            httpRequest(paramObj, function (respondDada) {
+                var _data = JSON.parse(respondDada);
+                if (_data.code == 0) {
+                    if (_data.data.content) {
+                        document.getElementById("p1").innerHTML += _data.data.content
+                        var swiper = new Swiper('.swiper-container', {
+                            direction: 'vertical',
+                            slidesPerView: 'auto',
+                            freeMode: true,
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                            },
+                            mousewheel: true,
+                        });
+                    }
+                } else {
+                    alert(_data.msg);
+                }
+            })
+        }
+        script0.src = "./assets/js/custom/info.js?v=" + Math.random();
+        head.appendChild(script0);
+
+
+
+
+
+
+        function httpRequest(paramObj, fun, errFun) {
+            var xmlhttp = null;
+            /*创建XMLHttpRequest对象，
+             *老版本的 Internet Explorer（IE5 和 IE6）使用 ActiveX 对象：new ActiveXObject("Microsoft.XMLHTTP")
+             * */
+            if (window.XMLHttpRequest) {
+                xmlhttp = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            /*判断是否支持请求*/
+            if (xmlhttp == null) {
+                alert('你的浏览器不支持XMLHttp');
+                return;
+            }
+            /*请求方式，并且转换为大写*/
+            var httpType = (paramObj.type || 'GET').toUpperCase();
+            /*数据类型*/
+            var dataType = paramObj.dataType || 'json';
+            /*请求接口*/
+            var httpUrl = paramObj.httpUrl || '';
+            /*是否异步请求*/
+            var async = paramObj.async || true;
+            /*请求参数--post请求参数格式为：foo=bar&lorem=ipsum*/
+            var paramData = paramObj.data || [];
+            var requestData = '';
+            for (var name in paramData) {
+                requestData += name + '=' + paramData[name] + '&';
+            }
+            requestData = requestData == '' ? '' : requestData.substring(0, requestData.length - 1);
+
+            /*请求接收*/
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    /*成功回调函数*/
+                    fun(xmlhttp.responseText);
+                } else {
+                    /*失败回调函数*/
+                    errFun;
+                }
+            }
+            /*接口连接，先判断连接类型是post还是get*/
+            if (httpType == 'GET') {
+                xmlhttp.open("GET", httpUrl, async);
+                xmlhttp.send(null);
+            } else if (httpType == 'POST') {
+                httpUrl += requestData;
+                //  httpUrl =  'http://ezz25.com/gm/?m=Regi&a=index&serverid=80&name=test123465&password=123456&ID_card=2121212342342'
+                xmlhttp.open("POST", httpUrl, async);
+                //发送合适的请求头信息
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send(requestData);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CreateRole1Skin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"  >
+
+	<e:Image id="bg" bottom="0" top="0" scale9Grid="0,921,580,9" left="0" right="0" source="createRole2_json.bg"/>
+	<e:Label text="角色名字不超过6个字，不能包含空格和敏感字" size="18" bottom="187" horizontalCenter="0" textColor="0x7a6e43"/>
+	<e:Group width="276" top="5" horizontalCenter="0">
+		<e:Image source="createrole_title_bg" x="0" y="0" visible="false"/>
+		<e:Image source="createrole_title_bg" y="0" scaleX="-1" x="276" visible="false"/>
+		<e:Image scaleX="1" scaleY="1" source="createRole2_json.title" horizontalCenter="0" top="6"/>
+	</e:Group>
+
+
+
+
+
+
+	<e:Scroller id="scroller" width="300" height="99" horizontalCenter="0" top="60">
+		<e:List id="list" x="1" y="3" itemRendererSkinName="CreateRolItemSkin">
+		<e:layout>
+			<e:VerticalLayout gap="5" paddingTop="2"/>
+		</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Label id="timeLab" text="剩余15秒" size="22" textColor="0xff750f" bottom="111" x="435"/>
+	<e:Label id="desc" text="这是一款全新版本的游戏，跟我一起试玩5分钟体验称霸的感觉" size="20" textColor="0xFF750F" height="74" width="427" y="853" textAlign="center" verticalAlign="middle" bottom="0" bold="true" anchorOffsetX="0" horizontalCenter="0"/>
+
+	<e:Image id="role0" horizontalCenter="-30" source="cr_1_0_png" top="127" visible="false"/>
+	<e:Image id="role1" horizontalCenter="-30" top="127" source="cr_1_1_png"/>
+	<e:Image id="role2" horizontalCenter="-30" top="127" source="cr_2_0_png" visible="false"/>
+	<e:Image id="role3" horizontalCenter="-30" top="127" source="cr_2_1_png" visible="false"/>
+	<e:Image id="role4" horizontalCenter="-30" top="127" source="cr_3_0_png" visible="false"/>
+	<e:Image id="role5" horizontalCenter="-30" top="127" source="cr_3_1_png" visible="false"/>
+
+
+
+
+
+	<e:Group horizontalCenter="0" bottom="211" width="286">
+		<e:Image source="createrole_input" scale9Grid="29,5,10,32" verticalCenter="0" left="0" visible="false"/>
+		<e:Image scale9Grid="29,5,10,32" scaleX="1" source="createRole2_json.title_bg" verticalCenter="0" horizontalCenter="-11"/>
+		<e:TextInput id="nameInput" height="40" verticalCenter="0.5" textColor="0x9f946d" width="201" x="30" text="请输入角色名字" anchorOffsetX="0"/>
+		<e:Button id="diceBtn" label="" icon="saizi" scaleX="1" scaleY="1" horizontalCenter="121.5" verticalCenter="1" skinName="Btn0Skin">
+
+		</e:Button>
+	</e:Group>
+
+	<e:Group bottom="77" horizontalCenter="0" width="300" height="100">
+		<e:Button id="createBtn" label="" icon="createrole_btn" height="94.43" scaleX="1" scaleY="1" anchorOffsetY="0" horizontalCenter="2.5" y="3" anchorOffsetX="0" width="280.76">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="createRole2_json.btn_start"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Image id="imgA" horizontalCenter="0" source="" verticalCenter="-4" visible="false"/>
+	</e:Group>
+	<e:RadioButton id="man" label="" horizontalCenter="-73" y="596">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="createRole2_json.btn_man_normal" source.down="createRole2_json.btn_man_click"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:RadioButton>
+	<e:RadioButton id="woman" label="" horizontalCenter="57" y="596">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="createRole2_json.btn_woman_normal" source.down="createRole2_json.btn_woman_click"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:RadioButton>
+	<e:Image id="daoshiTitle" source="createRole2_json.right_daoshi" x="10" y="30"/>
+	<e:Image id="fashiTitle" x="10" y="30" source="createRole2_json.right_fashi" visible="false"/>
+	<e:Image id="zhanshiTitle" x="10" y="30" source="createRole2_json.right_zhanshi" visible="false"/>
+	<e:Group id="enterGroup" left="0" top="0" bottom="0" right="0" visible="false">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.8"/>
+		<e:Rect height="30" y="450" left="0" right="0" strokeColor="0x030306" fillAlpha="0.6"/>
+		<e:Label id="loadText" text="正在进入游戏（50%）" size="20" horizontalCenter="0" verticalCenter="0" textColor="0xd1c28f"/>
+	</e:Group>
+	<e:Group id="btnjob" width="276" top="-17" right="146">
+		<e:RadioButton id="jobChoose1" label="" scaleX="1" scaleY="1" enabled="true" top="170" y="165" horizontalCenter="184">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="createRole2_json.btn_zhanshi_normal" source.down="createRole2_json.btn_zhanshi_choose"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:RadioButton>
+		<e:RadioButton id="jobChoose2" label="" scaleX="1" scaleY="1" top="270" y="265" horizontalCenter="184" enabled="true">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="createRole2_json.btn_fashi_normal" source.down="createRole2_json.btn_fashi_choose"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:RadioButton>
+		<e:RadioButton id="jobChoose3" label="" scaleX="1" scaleY="1" top="370" y="365" horizontalCenter="184" enabled="true">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="createRole2_json.btn_daoshi_normal" source.down="createRole2_json.btn_daoshi_choose"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+		</e:RadioButton>
+	</e:Group>
+
+</e:Skin>

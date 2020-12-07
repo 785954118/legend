@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="loginList" width="289" height="44" currentState="normal" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"  states="up,down,normal,disable" >
+	<e:Image id="bg_black" source="loginPic_json.login_boom_room" x="0" y="0" visible.up="false" visible.disable="false"/>
+	<e:Image id="bg_light" source="loginPic_json.login_hot_room" x="0" y="0" visible.down="false" visible.normal="false" visible.disable="false"/>
+	<e:Image id="icon_new" source="loginPic_json.login_new" x="244" y="1" visible.up="false" visible.down="false" visible.normal="false" visible.disable="false"/>
+	<e:Image id="icon_hot" source="loginPic_json.login_boom" x="244" y="2" visible.up="false" visible.down="false" visible.normal="false" visible.disable="false"/>
+	<e:Image source="loginPic_json.login_maintain_room" x="1" y="2" visible.up="false" visible.down="false" visible.normal="false"/>
+	<e:Image source="loginPic_json.login_maintain" x="244" y="1" visible.up="false" visible.down="false" visible.normal="false"/>
+	<e:Label id="labelDisplay" text="大帝一服" y="8" horizontalCenter="0.5" size="20" textColor="0xfcc874" verticalAlign="middle"/>
+</e:Skin>

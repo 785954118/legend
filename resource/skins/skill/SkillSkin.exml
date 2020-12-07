@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SkillSkin" width="554" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" height="716">
+	<e:Image source="new_jineng_json.new_jineng_jingluo_bg" top="-4" bottom="-210" left="-9" right="-17"/>
+	<e:Image source="new_jineng_json.new_jineng_jineng_bg" width="546" height="572" verticalCenter="-14" horizontalCenter="9"/>
+
+	<e:Group id="dinghong0" width="556" height="86" bottom="0" horizontalCenter="0" visible="false">
+		<e:Image x="0" top="0" bottom="0" source="bantoumingkuang3"  visible="false"/>
+		<e:Image scaleX="-1" top="0" bottom="0" source="bantoumingkuang3" right="0"  visible="false"/>
+	</e:Group>
+
+	<e:Component id="skillItem1" skinName="SkillItem" horizontalCenter="0" verticalCenter="-196"/>
+	<e:Component id="skillItem2" skinName="SkillItem"  horizontalCenter="0" verticalCenter="-103"/>
+	<e:Component id="skillItem3" skinName="SkillItem"  horizontalCenter="0" verticalCenter="-8"/>
+	<e:Component id="skillItem4" skinName="SkillItem"  horizontalCenter="0" verticalCenter="87"/>
+	<e:Component id="skillItem5" skinName="SkillItem"  horizontalCenter="0" verticalCenter="181"/>
+	<e:Button id="all" label="全部升级" width="160" height="60" skinName="Btn1Skin" bottom="10" horizontalCenter="0"/>
+</e:Skin>

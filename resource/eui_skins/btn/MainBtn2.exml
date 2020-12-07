@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MainBtn2" states="up,down,disabled"
+        xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" includeIn="down" width.down="115" height.down="60" width="109" height="86">
+	<e:Image id="iconDisplay" alpha.disabled="0.5" pixelHitTest="true" x.down="0" y.down="2" x="0" y="0" source="new_zjm_json.new_zjmfuben"/>
+	<e:Image id="selectIcon" pixelHitTest="true" source.up="xuanzhongyuan" source.down="xuanzhongyuan" height.disabled="0" height.up="0" source="xuanzhongyuan" visible.up="false" visible.disabled="false" x="28" width="50" height="50" y="29" y.down="7" visible="false"/>
+	<e:Group id="redPoint" width="30" height="30" alpha.disabled="0.5" y="7" y.down="-2" right.up="-4" y.up="-4" right.down="-4" x="75">
+		<e:Image source="zjmhongdian" y="3" x="3"/>
+		<e:Label id="txt" size="16" width="25" textAlign="center" horizontalCenter="0" verticalCenter="0" verticalAlign="middle"/>
+	</e:Group>
+</e:Skin>

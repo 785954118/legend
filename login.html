@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>优优传奇</title>
+    <!--防止index.html被浏览器缓存--begin-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <!--防止index.html被浏览器缓存--over-->
+
+
+
+
+    <link href="favicon.ico" rel="shortcut icon">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+    <link href="./assets/css/common/common.css" rel="stylesheet">
+    <link href="./assets/css/custom/login.css" rel="stylesheet">
+    <script src="./assets/js/common/jquery.min.js"></script>
+    <script src="./assets/js/common/md5.min.js"></script>
+    <script src="./assets/js/common/loading.min.js"></script>
+
+
+<body>
+    <div class="header">
+        <img src="./assets/images/login/notice.png" alt="公告" id='gonggaobtn'>
+    </div>
+    <div class="main">
+        <div class="block">
+            <div class="top">
+                <img src="./assets/images/icon/font/account-login.png" class="login-block block_top block_title"
+                    id="loginimg" style="margin-left: 0px;" />
+                <!-- <img src="./assets/images/icon/font/gonggaotitle.png" class="login-block block_top block_title" />   -->
+                <!-- <a href="./login.html"><img src="./assets/images/room/close.png" class="close-img"></a> -->
+            </div>
+            <div class="center">
+            </div>
+            <div class="bottom">
+            </div>
+        </div>
+        <div id='gonggaomb' class="row" style="height: 250px;width: 300px;text-align: center;position: relative">
+            <div class="swiper-container" style="height: 100%; width: 100%;overflow: hidden;" id="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="scroller">
+                        <p style="word-break:break-word;color: floralwhite" id='p1'>
+                            欢迎来到优优传奇世界！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id='loginmb' style="display:none">
+            <div class="row">
+                <img src="assets/images/input/1.png" alt="账号" />
+                <input class="txt-input txt-account" type="text" placeholder="请输入账号" id="acount"
+                    onblur="check_code()" />
+            </div>
+            <div class="row">
+                <img src="assets/images/input/1.png" alt="密码" />
+                <input class="txt-input txt-password" type="password" placeholder="请输入密码" id="exdata"
+                    onblur="check_pwd()" />
+            </div>
+            <div class="row">
+                <a href="./room.html">
+                    <img src="assets/images/login/select.png" class="select-room-img" />
+                    <div class="select-room" type="text">
+                        <i class="icon round red"></i>
+                        <span class="room-name" id='serverName'>联盟</span>
+                    </div>
+                </a>
+            </div>
+            <div class="row">
+                <span id="code_msg" style=" text-align: center;">* 6-10位字母、数字、下划线 </span>
+            </div>
+            <div class="row">
+                <button type="button" onclick="javascript:button_onclick();" class="start-game-button">
+                    <img src="assets/images/login/start.png" class="start-game" />
+                    <img src="assets/images/icon/font/login.png" class="start-game-name" />
+                </button>
+            </div>
+            <div class="row bottom-row" style="margin-bottom: 0;">
+                <!-- <a href="" class="left">忘记密码？</a>-->
+                <a href="./register.html" class="right">快速注册</a>
+                <!-- <iframe src="http://scmyxs.com/game" frameborder="0"></iframe> -->
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/custom/index.min.js?v=1.0.0"></script>
+    <script src="./assets/js/custom/swiper.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2f4d0caff62d3affc9d7ce51c369ca09";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            mousewheel: true,
+        });
+        var btn = document.getElementById("gonggaobtn");
+        var gonggaomb = document.getElementById("gonggaomb");
+        var loginmb = document.getElementById("loginmb");
+        var gonggaoimg = document.getElementById("gonggaoimg");
+        var loginimg = document.getElementById("loginimg");
+
+
+        var channel = 'zhousi';
+        var paramObj = {
+            httpUrl: 'https://cq.58hufen.com/gm/index.php?m=ServerInfo&a=game_notice',
+            type: 'post',
+        }
+        var self = this
+        this.loading = $.openCustomLoading("数据请求中");
+        this.gonggaotxt = '欢迎来到优优传奇世界';
+        httpRequest(paramObj, function (respondDada) {
+            self.loading.hide();
+            var _data = JSON.parse(respondDada);
+            if (_data.code == 0) {
+                self.gonggaotxt = _data.data.content
+            } else {
+                alert(_data.msg);
+            }
+        })
+
+
+        btn.onclick = (function (event) {
+            if (gonggaomb.style.display == 'none') {
+                gonggaomb.style.display = 'block'
+                loginmb.style.display = 'none'
+                loginimg.src = "./assets/images/icon/font/gonggaotitle.png"
+
+                document.getElementById("p1").innerText =  this.gonggaotxt;
+
+
+
+            } else {
+                gonggaomb.style.display = 'none'
+                loginmb.style.display = 'block'
+                loginimg.src = "./assets/images/icon/font/account-login.png"
+
+            }
+        });
+    </script>
+</body>
+
+</html>

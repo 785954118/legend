@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="OSADailyDoubleRechargeSkin" width="560" height="620" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="new_fuli_jihuoma_diwen2_png" horizontalCenter="0" verticalCenter="37"/>
+	<e:Image source="body002_1_c2_png" verticalCenter="-108" horizontalCenter="145"/>
+	<e:List id="reward" itemRendererSkinName="ItemSkin" verticalCenter="46" horizontalCenter="-112.5">
+		<e:layout>
+		<e:HorizontalLayout verticalAlign="middle" gap="-5"/>
+		</e:layout>
+	</e:List>
+	<e:Button id="getBtn" label="领取" horizontalCenter="0" verticalCenter="192" skinName="Btn3Skin"/>
+	<e:Label text="每天均可领取一个小时的双倍经验加成" size="15" horizontalCenter="0.5" verticalCenter="252.5" textColor="0xea7117"/>
+	<e:Image source="tongyong_json.gantanhao" horizontalCenter="-143" verticalCenter="252"/>
+	<e:Image source="Double_font_png" horizontalCenter="-76.5" verticalCenter="-198.5"/>
+
+</e:Skin>

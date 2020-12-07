@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="SysMesItemSkin" width="548" height="44" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+
+
+	<e:Group left="2" right="2" top="0" bottom="0">
+		<e:Image id="type" x="16" source="lt_02" y="10"/>
+		<e:Image id="bg" scale9Grid="86,1,4,1" source="tongyongline" height="2" y="40" x="0"/>
+		<e:Label id="str" text="123" size="18" verticalAlign="middle" textColor="0x9f946d" y="11" anchorOffsetX="0" right="0" left="69"/>
+	</e:Group>
+	
+	
+	
+</e:Skin>

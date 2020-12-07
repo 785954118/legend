@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ChatItemSkin3" width="540" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="34">
+	<e:Group id="textGroup" top="1" bottom="1" left="2" right="2">
+		<e:Label id="showChannel" text="[世界]" x="0" y="0" size="16" textColor="0xd1c28f"/>
+		<e:Label id="showHead" text="[名字]" size="16" maxWidth="314" x="72" y="0" height="16"   textColor="0xd1c28f"/>
+		<e:Label id="showText" text="1.本游戏并不支持玩家与玩家之间交易，谨防受骗。2.工作人员在任何时候都不会问你索取游戏密码，仅在必要时才需提供帐号，不要将密码告诉任何人。3.不要贪图任何小便宜，贪图小便宜就是上当受骗的开始！进行任何非官方渠道的私下交易行为，GM有权对您的账号进行包括但不限于封号、冻结等处理。" y="0" size="16" height="16" x="116" textColor="0xd1c28f"/>
+		<e:Image id="chatVip" x="45" y="0" source="num_json.xvip_v2_png" height="16" width="25"/>
+	</e:Group>
+</e:Skin>

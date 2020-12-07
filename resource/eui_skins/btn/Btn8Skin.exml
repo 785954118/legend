@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="Btn8Skin" states="up,down" currentState="up" xmlns:e="http://ns.egret.com/eui"         xmlns:w="http://ns.egret.com/wing"         width="209" height="120">
+	<e:Image  x.up="0" y.up="0" horizontalCenter="0" y="0" scaleX.down="0.95" scaleY.down="0.95" y.down="4" source="new_chongzhi_json.new_shouchong_btn"/>
+	<e:Label id="rmb" size="28" text="100元" verticalCenter="-4"
+	         stroke="1" strokeColor="0xff9400" horizontalCenter="2" textColor="0xffffff" size.down="24" visible="false"/>
+	<e:Group id="zhekou" x="69" y="42">
+		<e:Label id="rmb0" size="19" text="原价:350元" stroke="1" strokeColor="0xFF9400" textColor="0xFFFFFF" y="-15" horizontalCenter="0"/>
+		<e:Label id="rmb1" size="28" text="100元" stroke="1" strokeColor="0xFF9400" textColor="0xFFFFFF" y="8" horizontalCenter="0"/>
+		<e:Image source="boolRed_png" y="-5" width="92" horizontalCenter="0"/>
+	</e:Group>
+	<e:Label id="yuanbao" size="22" text="40000" strokeColor="0x2b2b2b" bold="true" y="90" horizontalCenter="0" textColor="0xf8b141"/>
+	<e:Label size="22" text="获得           元宝" strokeColor="0x2B2B2B" y="90" textColor="0x20cb30" horizontalCenter="0"/>
+</e:Skin>

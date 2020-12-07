@@ -1,0 +1,126 @@
+body{
+    background: url(../../images/bg/room.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.main{
+    background: url(../../images/bg/room_list.png);
+    background-position: top;
+    background-size: contain;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 89%;
+    height: 73%;
+    max-width: 400px;
+    background-repeat: no-repeat;
+}
+
+.main .row{
+    text-align: center;
+    position: relative;
+}
+.close-img{
+    position: absolute;
+    width: 46px;
+    top: -19px;
+    right: -12px;
+}
+.title{
+    color: #dbaa5b;
+    font-weight: 500;
+}
+.title-row{
+    margin-top:29px;
+}
+.room-list-row{
+    width: 92%;
+    height: 86%;
+    margin: 0 auto;
+    margin-left: 15px;
+}
+.room-list-row .col{
+    display: inline-block;
+    height: 90%;
+    vertical-align: top;
+}
+
+.room-list-row .right{
+    width: 36%;
+    margin-top:10px;
+}
+.room-list-row .left{
+    margin-top:10px;
+    width: 60%;
+}
+
+.room-group{
+    background-image: url(../../images/room/group-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ad4c21;
+    text-shadow: 0px 2px 3px #222;
+}
+
+.room-group.active{
+    background-image: url(../../images/room/group-light.png);
+    color: #dbaa5b;
+}
+.room-group:hover{
+    background-image: url(../../images/room/group-light.png);
+    color: #dbaa5b;
+}
+._room{
+    width: 100%;
+    min-height: 35px;
+    position: absolute;
+    margin-top: -16%;
+}
+.room{
+    background-image:url(../../images/room/new-room.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 35px;
+    line-height: 35px;
+    color: #dbaa5b;
+    font-size: 14px;
+    position: relative;
+}
+
+.room.hot{
+    background-image:url(../../images/room/hot-room.png);
+    color: #dbaa5b;
+}
+
+.room.boom{
+    background-image:url(../../images/room/boom-room.png);
+    color: #956514;
+}
+.room:hover{
+    background-image: url(../../images/room/hot-room.png);
+    color: #dbaa5b;
+}
+.room.new{
+    background-image:url(../../images/room/new-room.png);
+    color: #bd460f;
+}
+
+.room.maintain{
+    background-image:url(../../images/room/maintain-room.png);
+    color: #7d7777;
+}
+
+.room i{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}

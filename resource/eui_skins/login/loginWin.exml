@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="loginWin" width="580" height="930" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="loginpb" horizontalCenter="0" verticalCenter="-134">
+		<e:Image source="loginPic_json.login_block_top" y="0" x="0"/>
+		<e:Image source="loginPic_json.login_block_center" y="146" x="16" anchorOffsetY="0" height="209"/>
+		<e:Image source="loginPic_json.login_block_bottom" y="352" x="24"/>
+		<e:Image source="loginPic_json.login_account" y="88" horizontalCenter="-24.5"/>
+		<e:Image source="loginPic_json.login_password" y="156" horizontalCenter="-24.5"/>
+		<e:Group id="dengluInfo" y="22" horizontalCenter="0">
+			<e:Image source="loginPic_json.login_account_login" y="0" horizontalCenter="0"/>
+			<e:Group id="loginBtn" y="293" horizontalCenter="0">
+			<e:Image source="loginPic_json.login_start" y="0" x="0"/>
+			<e:Image source="loginPic_json.login_login" y="5" x="44"/>
+			</e:Group>
+			<e:Label id="zhuceLabel" text="注册" x="377" y="335" size="21" verticalAlign="middle" textColor="0xdbaa5b" bold="true" visible="false"/>
+		</e:Group>
+		<e:Group id="zhuceInfo" horizontalCenter="0" y="27" visible="false">
+			<e:Group id="zhuceBtn" y="266" horizontalCenter="0.5">
+			<e:Image source="loginPic_json.login_start" y="0" x="0"/>
+			<e:Image source="loginPic_json.login_register" y="8" horizontalCenter="0"/>
+			</e:Group>
+			<e:Image source="loginPic_json.login_quick_register" y="-10" horizontalCenter="0"/>
+			<e:Image id="closeZhuce" source="loginPic_json.login_close" x="477" y="-33"/>
+			<e:CheckBox id="checkxieyi" label="" x="118" y="320" skinName="CheckBox0" anchorOffsetX="0" width="39" anchorOffsetY="0" height="33" enabled="true"/>
+			<e:Label id="xieyibtn" text="我同意《用户服务与隐私协议》" x="166" y="329" size="20" textColor="0xafaeae" bold="true"/>
+		</e:Group>
+		<e:Group id="roomChoose" x="159" y="227">
+			<e:Image source="loginPic_json.login_select" y="0" x="0"/>
+			<e:Label id="roomName" text="" x="82" y="10" size="20" textColor="0xdbaa5b"/>
+		</e:Group>
+		<e:EditableText id="account" width="213" height="31" text="" x="174" y="91" anchorOffsetY="0" anchorOffsetX="0" size="20" verticalAlign="middle"/>
+		<e:EditableText id="password" width="213" height="31" text="" x="173" y="158" anchorOffsetY="0" anchorOffsetX="0" size="20" verticalAlign="middle"/>
+		<e:Label id="accountTrp" text="*账号必须为6-10位字母、数字、下划线" x="163" y="154" size="13" verticalAlign="middle" visible="false"/>
+		<e:Label id="passwordTrp" text="*密码必须为8-10位字母、数字、下划线" x="162" y="222" size="13" verticalAlign="middle" visible="false"/>
+	</e:Group>
+	<e:Group id="roompb" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image source="login_room_list_png" x="0" y="0"/>
+		<e:Image id="roomClose" source="loginPic_json.login_close" x="474" y="0"/>
+		<e:Image source="loginPic_json.login_group_light" x="11" y="90"/>
+		<e:Image source="loginPic_json.login_history" x="56" y="110"/>
+		<e:Label text="选择区服" y="46" size="20" textColor="0xdbaa5b" x="220"/>
+		<e:Group id="serverList" x="205" y="176">
+			<e:Label text="服务器列表" y="11" size="18" textColor="0xDBAA5B" x="112"/>
+			<e:Scroller width="292" height="546" x="0" y="37" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Group id="scrollerGroup" anchorOffsetX="0" width="291" anchorOffsetY="0" height="548">
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group id="lastServerName" x="207" y="106">
+			<e:Label text="上一次登录服务器" y="0" size="18" textColor="0xDBAA5B" x="82"/>
+			<e:Button id="lastServerBtn" label="Button" x="0" y="26" skinName="loginList"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="blackBg" left="0" right="0" top="0" bottom="0" verticalCenter="0" horizontalCenter="0" visible="false">
+		<e:Rect fillAlpha="0.89" left="0" bottom="0" top="0" right="0" horizontalCenter="0" verticalCenter="0"/>
+		<e:Label id="trpInfo" text="获取服务器列表..." horizontalCenter="0" verticalCenter="-74" textColor="0xdbaa5b" size="23"/>
+	</e:Group>
+	<e:Group id="warnGroup" horizontalCenter="0" verticalCenter="0" width="400" height="300" visible="false">
+		<e:Image source="tongyongkuang3bg" left="0" right="0" top="2" bottom="0" scale9Grid="12,6,21,25"/>
+		<e:Image source="tongyongkuang3tou" left="0" right="0" scale9Grid="72,18,264,29"/>
+		<e:Label id="title0" size="24" text="提  示" horizontalCenter="0" y="11" bold="true" textColor="0xBD600D"/>
+		<e:Button id="sureBtn0" label="确定" bottom="20" horizontalCenter="-1" width="120" height="50" skinName="Btn3Skin"/>
+		<e:Button id="notBtn0" label="取消" bottom="20" horizontalCenter="80" width="120" height="50" skinName="Btn3Skin" visible="false"/>
+		<e:Label id="warnLabel0" text="有新版本发现，请到指定网站下载最新版本" size="18" textAlign="center" verticalAlign="middle" verticalCenter="-10" textColor="0xD1C28F" horizontalCenter="0" width="332" height="160"/>
+		<e:Group id="leftGroup0" horizontalCenter="-80" verticalCenter="60" visible="false">
+		<e:Image id="icon0" width="20" height="20" x="0" y="0" source="zjmyuanbao"/>
+		<e:Label id="label0" text="单元宝" x="30" y="0" size="20" textColor="0xD1C28F"/>
+		</e:Group>
+		<e:Group id="rightGroup0" horizontalCenter="80" verticalCenter="60" visible="false">
+		<e:Image id="icon1" width="20" height="20" x="0" y="0" source="zjmyuanbao"/>
+		<e:Label id="label1" text="单元宝" size="20" x="30" textColor="0xD1C28F"/>
+		</e:Group>
+	</e:Group>
+	<e:Image id="notice" source="new_icon_btn2_json.notice_png" right="25" top="22"/>
+	<e:Group id="gonggao" horizontalCenter="0" verticalCenter="0" height="930" width="580" visible="false">
+		<e:Image source="tongyong_json.tongyongkuang3bg" scale9Grid="7,6,36,37" anchorOffsetX="0" height="930" width="580" x="0" y="0"/>
+		<e:Image source="tongyong_json.tongyongkuang3tou" x="0" y="0" scale9Grid="50,5,300,37" anchorOffsetX="0" width="580"/>
+		<e:Image id="gonggaoClose" source="loginPic_json.login_close" x="519" y="5"/>
+		<e:Scroller width="533" height="835" x="24" y="72" anchorOffsetX="0" anchorOffsetY="0">
+			<e:Group id="scrollerGroup0" anchorOffsetX="0" width="533" anchorOffsetY="0" height="827">
+				<e:Label id="testLabel" text="" x="199" y="16" height="0" width="100"/>
+
+			</e:Group>
+		</e:Scroller>
+		<e:Label text="公告" textColor="0xbd600d" size="30" horizontalCenter="0" top="6" bold="true"/>
+	</e:Group>
+
+
+	<e:Group id="loadingpb" left="0" right="0" top="0" bottom="0" horizontalCenter="0" verticalCenter="0" visible="false">
+		<e:Image source="loadingbg_png" horizontalCenter="0" verticalCenter="0" left="0" right="0" top="0" bottom="0"/>
+		<e:ProgressBar id="loadingbar" width="500" height="30" skinName="bar12skin" horizontalCenter="2" verticalCenter="270"/>
+		<e:Label id="loadingLabel" text="加载资源中。。。" size="15" textColor="0xbfb92a" horizontalCenter="-140" verticalCenter="240.5"/>
+		<e:Label id="trp1" text="如果您是第一次打开游戏，加载游戏可能会比较大，请耐心等待" size="12" horizontalCenter="0" textColor="0xd3d1d1" verticalCenter="298"/>
+		<e:Label id="trp2" text="抵制不良游戏 拒绝盗版游戏 \n 请注意自我保护 谨防上当受骗 适度游戏益脑 合理安排时间 享受健康生活" size="13" horizontalCenter="0.5" textColor="0xffffff" bottom="48" textAlign="center" verticalAlign="middle" anchorOffsetY="0" height="35"/>
+	</e:Group>
+</e:Skin>

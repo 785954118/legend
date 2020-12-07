@@ -1,0 +1,15 @@
+{"file":"new_icon_btn2.png","frames":{
+"new_btn_double_icon_png":{"x":432,"y":97,"w":76,"h":93,"offX":0,"offY":1,"sourceW":76,"sourceH":95},
+"new_btn_qianghongbao_png":{"x":432,"y":0,"w":76,"h":95,"offX":0,"offY":0,"sourceW":76,"sourceH":95},
+"new_btn_qindiandenglu_png":{"x":0,"y":388,"w":92,"h":94,"offX":0,"offY":0,"sourceW":92,"sourceH":94},
+"new_btn_xianshidiaoluo_png":{"x":94,"y":388,"w":89,"h":95,"offX":0,"offY":0,"sourceW":89,"sourceH":95},
+"new_btn_yinjibaoji_png":{"x":0,"y":291,"w":92,"h":95,"offX":0,"offY":0,"sourceW":92,"sourceH":95},
+"new_btn_yuyijinsheng_png":{"x":94,"y":291,"w":91,"h":95,"offX":0,"offY":0,"sourceW":91,"sourceH":95},
+"new_icon_haifantian_png":{"x":165,"y":99,"w":68,"h":83,"offX":12,"offY":1,"sourceW":93,"sourceH":95},
+"new_icon_hefuboss_png":{"x":0,"y":99,"w":96,"h":94,"offX":0,"offY":0,"sourceW":96,"sourceH":94},
+"new_icon_xianshixunbao_png":{"x":0,"y":195,"w":93,"h":94,"offX":0,"offY":0,"sourceW":93,"sourceH":94},
+"new_icon_yuanbaozhuanpan_png":{"x":95,"y":195,"w":90,"h":94,"offX":0,"offY":0,"sourceW":90,"sourceH":94},
+"notice_png":{"x":98,"y":99,"w":65,"h":88,"offX":0,"offY":0,"sourceW":65,"sourceH":88},
+"privilege_icon_png":{"x":187,"y":184,"w":63,"h":59,"offX":0,"offY":0,"sourceW":63,"sourceH":59},
+"qianghongbao_img_png":{"x":0,"y":0,"w":430,"h":97,"offX":0,"offY":0,"sourceW":430,"sourceH":97},
+"qianghongbaobtn_png":{"x":185,"y":388,"w":76,"h":95,"offX":0,"offY":0,"sourceW":76,"sourceH":95}}}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PowerPanelSkin" currentState="yhead" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="302" height="64">
+    <e:Image id="bgImg" touchEnabled="false"  source="new_duanzao_zhanlibg" y="-21" x="18"/>
+    <e:Group id="flameGroup" y="8" x="104"></e:Group>
+    <e:Image id="powerImg" touchEnabled="false"  source="new_duanzao2_json.new_duanzao_zhanli" y="19" x="61"/>
+</e:Skin>

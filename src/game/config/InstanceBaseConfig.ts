@@ -1,0 +1,3 @@
+class InstanceBaseConfig {
+	maxCheckPoint:number;
+}

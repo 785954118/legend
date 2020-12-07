@@ -1,0 +1,9 @@
+{"file":"payPanel.png","frames":{
+"WeChat Pay_icon_png":{"x":756,"y":0,"w":32,"h":32,"offX":0,"offY":0,"sourceW":32,"sourceH":32},
+"Alipay_icon_png":{"x":722,"y":0,"w":32,"h":32,"offX":0,"offY":0,"sourceW":32,"sourceH":32},
+"Buy point card_icon_png":{"x":688,"y":0,"w":32,"h":32,"offX":0,"offY":0,"sourceW":32,"sourceH":32},
+"pay immediately_icon_png":{"x":0,"y":523,"w":686,"h":74,"offX":0,"offY":0,"sourceW":686,"sourceH":74},
+"Rounded Rectangle_1_png":{"x":0,"y":337,"w":686,"h":184,"offX":0,"offY":0,"sourceW":686,"sourceH":184},
+"Rounded Rectangle_2_png":{"x":0,"y":0,"w":686,"h":335,"offX":0,"offY":0,"sourceW":686,"sourceH":335},
+"Selected_icon_png":{"x":817,"y":0,"w":25,"h":25,"offX":0,"offY":0,"sourceW":25,"sourceH":25},
+"unSelected_icon_png":{"x":790,"y":0,"w":25,"h":25,"offX":0,"offY":0,"sourceW":25,"sourceH":25}}}

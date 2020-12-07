@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="MonthCardSkin" width="540" height="692" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="15d35a61f64"/>
+	<e:Group id="monthGroup" left="0" right="0" top="0" bottom="-10" anchorOffsetY="0">
+		<e:Image width="540" height="150" source="yueka0" horizontalCenter="0" y="0"/>
+
+		<e:Group horizontalCenter="0" height="402" y="144">
+			<e:Group x="0" y="0" width="531" height="99">
+				<e:Image y="0" x="0" source="yueka1"/>
+				<e:Image x="-23" y="82" source="yueka49" rotation="-49"/>
+				<e:Image x="-2" y="66" rotation="-49" source="yueka491"/>
+			</e:Group>
+			<e:Group x="0" y="0" width="531" height="99">
+				<e:Image y="0" x="0" source="yueka2"/>
+				<e:Image x="-23" y="82" source="yueka49" rotation="-49"/>
+				<e:Image x="0" y="61" rotation="-49" source="yueka492"/>
+			</e:Group>
+			<e:Group x="10" y="10" width="531" height="99">
+				<e:Image y="0" x="0" source="yueka3"/>
+				<e:Image x="-23" y="82" source="yueka49" rotation="-49"/>
+				<e:Image x="-5" y="71" rotation="-49" source="yueka493"/>
+			</e:Group>
+			<e:Group x="20" y="20" width="531" height="99">
+				<e:Image y="0" x="0" source="yueka4"/>
+				<e:Image x="-23" y="82" source="yueka49" rotation="-49"/>
+				<e:Image x="2" y="58" rotation="-49" source="yueka494"/>
+			</e:Group>
+
+
+
+			<e:layout>
+			<e:VerticalLayout gap="2"/>
+			</e:layout>
+		</e:Group>
+		<e:Image y="2" horizontalCenter="-90" source="yueka5"/>
+		<e:Image y="-4" source="yuekatu" horizontalCenter="12"/>
+		<e:Image y="116" source="bantoutiaoboss" scaleX="-1" width="244" horizontalCenter="146"/>
+		<e:Label text="购买月卡不计入VIP和首充" y="120" size="18" textColor="0x916625" bold="true" horizontalCenter="161.5"/>
+		<e:Label id="feng" text="封测期间不开放月卡功能" size="24" horizontalCenter="0" bottom="20" textColor="0x9f946d" visible="false"/>
+
+		<e:Group id="xianshi1" horizontalCenter="29.5" verticalCenter="293.5" visible="false">
+			<e:Image source="new_pay2_json.new_paybtnbg_png" x="3" y="1.5" anchorOffsetY="0" height="93" anchorOffsetX="0" width="230" visible="false"/>
+			<e:Label text="原价116元" y="86" size="20" bold="true" x="339" textColor="0xfcd802"/>
+			<e:Image source="boolRed_png" x="352" y="96" width="69"/>
+			<e:Label id="first0" text="如果已经有月卡，将会自动延长月卡时间。" size="15" textAlign="center" textColor="0x20CB30" bold="true" y="119" x="106"/>
+			<e:Label id="first" text="28元的元宝月卡 + 88元的特权月卡，原价116，现价只要100元\n并且有相应元宝赠送哦" size="18" horizontalCenter="-36" bold="true" textAlign="center" textColor="0x20cb30" verticalCenter="-72" x="-128" y="-38" scaleX="1" scaleY="1"/>
+		</e:Group>
+
+		<e:Button id="btn1" label="28元抢购" skinName="Btn1Skin" horizontalCenter="0" verticalCenter="302"/>
+		<e:Button id="btn0" label="100元抢购" verticalCenter="293" horizontalCenter="0" skinName="Btn16Skin" visible="false"/>
+		<e:Group id="xianshi2" horizontalCenter="-89" verticalCenter="281" visible="false">
+			<e:Image source="new_pay2_json.new_pay_price_icon_png" x="0" y="0" anchorOffsetX="0" width="76" anchorOffsetY="0" height="60"/>
+			<e:Label text="限时" y="23" size="16" bold="true" x="21" textColor="0xfc0505"/>
+		</e:Group>
+
+		<e:Label id="leftTime" text="月卡剩余：XX天XX小时" horizontalCenter="0" bottom="29" size="20" textColor="0xff9900" visible="false"/>
+
+
+
+
+
+
+
+	</e:Group>
+	<e:Label id="first1" text="首次购买额外赠送2800元宝" size="18" horizontalCenter="-3" bold="true" textAlign="center" textColor="0x20CB30" verticalCenter="253" x="-128" y="-38" scaleX="1" scaleY="1"/>
+
+</e:Skin>

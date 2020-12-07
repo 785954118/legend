@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="UIView2Skin" width="580" height="930" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="108" height="108" ellipseWidth="108" ellipseHeight="108" bottom="0" horizontalCenter="-231" />
+	<e:Group id="hPGroup" width="104" height="100"   touchEnabled="false"
+	         touchChildren="false"   horizontalCenter="-232" bottom="4">
+		<e:Image id="mpMask" width="66" height="99" rotation="179.05" source="new_duanzao_dihong_png" x="112" y="98"/>
+		<e:Image id="hpMask"  width="67" height="98" rotation="179.5" source="new_duanzao_dilan_png" x="71" y="102"/>
+
+	</e:Group>
+	<e:Image pixelHitTest="true" touchEnabled="false" width="642" source="zjmdibukuang" scale9Grid="172,75,9,34" horizontalCenter="-10" bottom="1" anchorOffsetX="0"/>
+
+
+	<e:ProgressBar skinName="bar0Skin" value="80" width="380" id="expBar" bottom="2" horizontalCenter="16" height="6"
+	               />
+	<e:ToggleButton id="roleBtn" icon="new_gnjuese" bottom="18" horizontalCenter="-137" skinName="MainButtonSkin"
+	                />
+	<e:ToggleButton id="taskBtn" icon="new_gnlilian" bottom="18" skinName="MainButtonSkin" horizontalCenter="13" />
+	<e:ToggleButton id="bagBtn" icon="new_gnbeibao" bottom="18" horizontalCenter="165" skinName="MainButtonSkin" />
+	<e:ToggleButton id="forgingBtn" icon="new_gnduanzao" bottom="18" horizontalCenter="90" skinName="MainButtonSkin"
+	                />
+	<e:ToggleButton id="furnaceBtn" icon="new_gnjineng" bottom="18" horizontalCenter="-61" skinName="MainButtonSkin"
+	                />
+	<e:Group id="groupBagTips" touchEnabled="false" touchChildren="false" bottom="86" horizontalCenter="164"
+	         height="30" width="130">
+		<e:Image  source="zjmqipao" scale9Grid="9,7,4,8" left="0" right="0" top="0" bottom="0"/>
+		<e:Label id="tipsText" text="有装备可以回收" size="16" textAlign="center"  verticalCenter="1" horizontalCenter="0" textColor="0xf8b141"/>
+	</e:Group>
+
+	<e:Group id="powerGroup" width="81" height="81" bottom="10" horizontalCenter="250">
+		<e:Image horizontalCenter="-15" verticalCenter="-3"  source="new_zjm_json.new_gnrightbtn"/>
+		<e:Image horizontalCenter="0" verticalCenter="0" source="zjmheji2"  visible="false"/>
+		<e:Image id="powerImg" verticalCenter="0" horizontalCenter="0"  source=""/>
+		<e:Image id="lockImg" horizontalCenter="0" verticalCenter="0" source="zjmheji3"  visible="false"/>
+	</e:Group>
+	<e:Group id="backBtnGroup"   width="100" height="100" horizontalCenter="250" bottom="4" visible="false">
+		<e:Button id="closeBtn" label="按钮" skinName="Btn0Skin" icon="zjmfanhui"   x="10" y="10"/>
+	</e:Group>
+	<e:Group id="flyItemGroup" touchEnabled="false" touchChildren="false"  width="580" height="930" bottom="0" horizontalCenter="0">
+	</e:Group>
+	<e:Image id="tips" horizontalCenter="0" bottom="247" source=""/>
+</e:Skin>

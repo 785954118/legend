@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="bar12skin" minWidth="30" minHeight="18" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+
+	<e:Image id="thumb" height="25" left="35" right="30" source="loading_json.tiao_png" scale9Grid="54,3,327,23" anchorOffsetY="0" y="4" anchorOffsetX="0" width="436"/>
+	<e:Image id="guang" width="72" height="29" scale9Grid="59,10,392,10" x="0" source="loading_json.guang_png" verticalCenter="0"/>
+	<e:Label id="labelDisplay" textAlign="center" verticalAlign="middle"
+			 size="17" fontFamily="Tahoma"
+			 horizontalCenter="0" verticalCenter="-0.5" text="1111" textColor="0xf7c43d"/>
+	<e:Image width="100%" height="100%" verticalCenter="0" source="loading_json.kuang_png" scale9Grid="59,10,392,10"/>
+</e:Skin>

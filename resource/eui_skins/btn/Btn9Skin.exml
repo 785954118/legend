@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="Btn9Skin" states="up,down,disabled" width="197" height="66" currentState="up"
+        xmlns:e="http://ns.egret.com/eui">
+	<e:Image  y.down="-15" source="new_chongzhi_json.new_shouchong_btn" anchorOffsetX="0" width="243" anchorOffsetY="0" height="95" x="-26" y="-17"/>
+	<e:Label id="labelDisplay" size="22" verticalCenter="3" text="牛逼按钮" horizontalCenter="5"
+	         textColor="0xffd93f" bold="true"  verticalCenter.down="0" visible.disabled="false" textColor.down="0x9f946d" horizontalCenter.up="0" verticalCenter.up="-2"/>
+	<e:Image source="new_chongzhi_json.new_shouchong_btntitle" x="26" y="18" visible="false"/>
+</e:Skin>

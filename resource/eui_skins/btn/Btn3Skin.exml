@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="Btn3Skin" states="up,down,disabled"
+        currentState="up" xmlns:e="http://ns.egret.com/eui"  width="91" height="42">
+	<e:Image x.down="1" y.down="1" left="-6" right="-6" top="-2" bottom="-9" top.down="-2" source="new_jineng_jineng_btndiwen_an" anchorOffsetY="0" anchorOffsetX="0" source.down="new_jineng_jineng_btndiwen_an" scale9Grid.down="18,9,75,23" left.down="-6" right.down="-6" bottom.down="-9" source.up="new_jineng_jineng_btndiwen_liang" scale9Grid.up="24,14,70,23" scale9Grid="22,14,72,26" source.disabled="new_jineng_jineng_btndiwen_an" scale9Grid.disabled="19,8,74,32"/>
+	<e:Label verticalAlign="middle" size="20" text="按钮" textAlign="center" id="labelDisplay" x.down="1" y.down="1" textColor="0xFFF2BE" horizontalCenter="0" verticalCenter="-1" textColor.up="0xd1c28f" textColor.down="0x9f946d" bold="true" verticalCenter.down="0" textColor.disabled="0x848484"/>
+</e:Skin>

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FirstChargeSkin" width="580" height="1161" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<w:Config id="15d0cca272f"/>
+	<e:Rect fillAlpha="0.8" left="0" right="0" top="0" bottom="0"/>
+	<e:Image width="580" horizontalCenter="0" bottom="0" top="0" source="tongyongmianbanbg2" scale9Grid="10,9,9,23" visible="false"/>
+	<e:Image source="new_juese_heji_bg_png" horizontalCenter="-1" top="0" bottom="0"/>
+	<ns1:BaseComponent id="roleSelect" skinName="RoleSelectPanelSkin" className="RoleSelectPanel" width="580" horizontalCenter="0" currentState="nohead"/>
+	<e:Image source="new_shangcheng_bg_png" horizontalCenter="1.5" top="34" bottom="97"/>
+	<e:Image source="new_shoucheng2_bg_png" top="68" bottom="101" horizontalCenter="-0.5"/>
+	<e:Group width="556" horizontalCenter="0" bottom="58" visible="false">
+		<e:Image source="tongyong2_json.bantoumingkuang4" x="0" top="0" bottom="0" width="278" height="90"/>
+		<e:Image source="tongyong2_json.bantoumingkuang4" scaleX="-1" right="0" top="0" bottom="0" width="278" height="90"/>
+	</e:Group>
+	<e:Image width="560" height="736" source="shouchongbg2_png" horizontalCenter="0" y="68" visible="false"/>
+
+	<e:Image source="shang_7" y="-2" height="30" width="181" horizontalCenter="-165"/>
+	<e:Image horizontalCenter="-182" top="0" source="new_shouchong_title_png"/>
+	<e:Group width="555" horizontalCenter="0" top="0" bottom="114">
+		<e:Button id="closeBtn" label="按钮" y="87" skinName="Btn0Skin" right="0" visible="false"/>
+		<e:Image id="weapImg" y="50" horizontalCenter="-120" source="" visible="false"/>
+		<e:Image id="roleImg" y="44" touchEnabled="false" horizontalCenter="120" source="" visible="false"/>
+		<e:Image source="shouchongt1" y="111" horizontalCenter="-157" visible="false"/>
+		<e:Image y="162" source="shouchongt2" horizontalCenter="-45" visible="false"/>
+		<e:Image y="224" horizontalCenter="0" source="shouchongt5" visible="false"/>
+		<e:Image y="321" source="shouchongt3" horizontalCenter="66" visible="false"/>
+		<e:Image source="shop_json.shouchong6" x="177" y="270" visible="false"/>
+		<e:Image source="new_chongzhi_json.new_shouchong2_label3" horizontalCenter="-131.5" verticalCenter="-283.5"/>
+		<e:Image source="new_chongzhi_json.new_shouchong_titlebg2" anchorOffsetX="0" width="327" horizontalCenter="128" verticalCenter="-69"/>
+		<e:Image source="new_chongzhi_json.new_shouchong2_label1" horizontalCenter="0.5" verticalCenter="-29"/>
+		<e:Image source="new_chongzhi_json.new_shouchong2_label4" horizontalCenter="-13" verticalCenter="-141.5"/>
+		<e:Image source="new_chongzhi_json.new_shouchong2_label8" horizontalCenter="30.5" verticalCenter="-107"/>
+		<e:Image source="new_chongzhi_json.new_shouchong2_label7" horizontalCenter="64" verticalCenter="-69.5"/>
+		<e:Image source="new_chongzhi_json.！" horizontalCenter="-191" verticalCenter="426"/>
+		<e:BitmapLabel font="num_8_fnt" text="30000" horizontalCenter="184" letterSpacing="-4" verticalCenter="-70"/>
+
+		<e:Group width="480" height="100" horizontalCenter="0" verticalCenter="46">
+			<e:Group horizontalCenter="0">
+				<ns1:BaseComponent id="item1" x="4" y="0" skinName="ItemSkin" className="ItemBase" scaleX="1" scaleY="1"/>
+				<ns1:BaseComponent id="item2" x="94" y="0" skinName="ItemSkin" className="ItemBase" scaleX="1" scaleY="1"/>
+				<ns1:BaseComponent id="item3" x="184" y="0" skinName="ItemSkin" className="ItemBase" scaleX="1" scaleY="1"/>
+				<ns1:BaseComponent id="item5" x="380" y="0" skinName="ItemSkin" className="ItemBase" scaleX="1" scaleY="1"/>
+				<ns1:BaseComponent id="item4" x="290" y="0" skinName="ItemSkin" className="ItemBase" scaleX="1" scaleY="1"/>
+				<ns1:BaseComponent id="item6" x="300" y="10" skinName="ItemSkin" className="ItemBase" scaleX="1" scaleY="1"/>
+				<e:layout>
+				<e:HorizontalLayout gap="-8"/>
+				</e:layout>
+			</e:Group>
+
+
+
+
+
+		<e:Image source="chongzhi_json.shouchongbq1" x="46" y="0" touchEnabled="false"/>
+		<e:Image source="chongzhi_json.shouchongbq1" x="153" y="0" touchEnabled="false" visible="false"/>
+		<e:Image x="163" y="1" source="shouchongbq2" touchEnabled="false"/>
+		<e:Image source="chongzhi_json.shouchongbq2" x="245" y="1" touchEnabled="false"/>
+			<e:Image source="chongzhi_json.shouchongbq2" x="326" y="1" touchEnabled="false"/>
+		</e:Group>
+		<e:Group id="unbuy" horizontalCenter="0" width="450" height="240" verticalCenter="220">
+		<e:Button id="chong0" label="Button" y="0" skinName="Btn8Skin" x="0"/>
+		<e:Button id="chong1" label="Button" y="0" skinName="Btn8Skin" right="0"/>
+		<e:Button id="chong2" label="Button" x="0" skinName="Btn8Skin" y="120"/>
+		<e:Button id="chong3" label="Button" skinName="Btn8Skin" right="0" y="120"/>
+			<e:Image y="130" touchEnabled="false" horizontalCenter="206" source="new_shouchong2_bg1"/>
+			<e:Label text="机会只有一次，以上仅选择一个可获得4倍元宝" size="18" textColor="0xfcc905" horizontalCenter="15.5" verticalCenter="207" bold="true"/>
+			<e:Label text="麻痹神戒" size="18" horizontalCenter="75" verticalCenter="136" textColor="0xfc23d4" bold="true"/>
+			<e:Label text="激活三英雄" size="18" horizontalCenter="221" verticalCenter="136" bold="true" textColor="0xff5700"/>
+			<e:Image source="new_chongzhi_json.new_shouchong2_label5" horizontalCenter="-10.5" verticalCenter="166.5" visible="false"/>
+			<e:Group id="warn" y="245" horizontalCenter="0" width="550" height="32" visible="false">
+				<e:Image source="bantoutiaobg" left="0" right="0" top="0" bottom="0" scale9Grid="70,5,90,35"/>
+				<e:Image y="2" source="shouchongt4_png" horizontalCenter="20"/>
+				<e:Image y="6" source="gantanhao" x="42"/>
+			</e:Group>
+			<e:Image source="zjm_json.zjmmabi" anchorOffsetX="0" width="30" anchorOffsetY="0" height="30" horizontalCenter="20" verticalCenter="134"/>
+			<e:Image source="num_3_json.+" verticalCenter="132" horizontalCenter="126"/>
+			<e:Image anchorOffsetX="0" width="32" anchorOffsetY="0" height="40" verticalCenter="139" horizontalCenter="157" source="new_icon_btn_json.new_icon_sanyingxiong_png"/>
+		</e:Group>
+		<e:Button id="buyed" label="领取首充礼包" skinName="Btn1Skin" width="160" height="60" scaleX="1" scaleY="1" verticalCenter="230" horizontalCenter="0"/>
+		<e:Button id="kefuBtn" label="联系客服" width="121" height="47" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="473" skinName="Btn3Skin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<e:Group id="buyGroup" horizontalCenter="0" verticalCenter="230" width="160" height="60">
+		</e:Group>
+		<e:Image source="new_shouchong_label9_png" horizontalCenter="57.5" verticalCenter="-209.5"/>
+		<e:Label text="充值遇到问题？点击联系客服" size="15" verticalCenter="511" horizontalCenter="0" textColor="0x8c8c8c"/>
+
+	</e:Group>
+	<e:Group width="582" horizontalCenter="0" touchEnabled="false" touchChildren="false" height="772" verticalCenter="-41" visible="false">
+		<e:Image source="shop_json.shang_2" x="0" y="-22"/>
+		<e:Image source="shop_json.shang_2" y="-22" scaleX="-1" right="0"/>
+		<e:Image source="shop_json.shang_1" y="-27" horizontalCenter="0"/>
+		<e:Image rotation="90" x="17" y="45" source="shang_3"/>
+		<e:Image source="shang_3" rotation="90" y="45" scaleY="-1" right="-3"/>
+		<e:Image x="-1" source="shang_10" bottom="-9"/>
+		<e:Image bottom="92" source="shang_9" top="202" scale9Grid="1,3,9,10"/>
+		<e:Image source="shang_10" bottom="-9" right="-1" scaleX="-1"/>
+		<e:Image source="shang_9" bottom="92" top="202" scale9Grid="1,3,9,10" right="0" scaleX="-1"/>
+		<e:Image x="16" bottom="0" source="shang_8" scale9Grid="60,4,7,24" width="275"/>
+		<e:Image bottom="0" source="shang_8" scale9Grid="60,4,7,24" width="275" scaleX="-1" right="16"/>
+		<e:Image x="11" bottom="-27" source="shang_5" touchEnabled="false"/>
+		<e:Image bottom="-11" source="shang_6" right="11" touchEnabled="false"/>
+	</e:Group>
+	<e:Group width="582" top="38" bottom="114" horizontalCenter="0" touchEnabled="false" touchThrough="true" visible="false">
+		<e:Image source="shop_json.shang_2" x="0" y="-22"/>
+		<e:Image source="shop_json.shang_2" y="-22" scaleX="-1" right="0"/>
+		<e:Image source="shop_json.shang_1" y="-27" horizontalCenter="0"/>
+		<e:Image rotation="90" x="17" y="45" source="shang_3"/>
+		<e:Image source="shang_3" rotation="90" y="45" scaleY="-1" right="-3"/>
+		<e:Image x="-1" source="shang_10" bottom="-9"/>
+		<e:Image bottom="92" source="shang_9" top="202" scale9Grid="1,3,9,10"/>
+		<e:Image source="shang_10" bottom="-9" right="-1" scaleX="-1"/>
+		<e:Image source="shang_9" bottom="92" top="202" scale9Grid="1,3,9,10" right="0" scaleX="-1"/>
+		<e:Image x="16" bottom="0" source="shang_8" scale9Grid="60,4,7,24" width="275"/>
+		<e:Image bottom="0" source="shang_8" scale9Grid="60,4,7,24" width="275" scaleX="-1" right="16"/>
+		<e:Image x="11" bottom="-6" source="shang_5" touchEnabled="false"/>
+		<e:Image bottom="-2" source="shang_6" right="11" touchEnabled="false"/>
+	</e:Group>
+
+</e:Skin>

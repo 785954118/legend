@@ -1,0 +1,767 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>优优传奇</title>
+	<!--防止index.html被浏览器缓存--begin-->
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="0">
+	<!--防止index.html被浏览器缓存--over-->
+
+	<link href="favicon.ico" rel="shortcut icon" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="full-screen" content="true" />
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="360-fullscreen" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<style>
+		html,
+		body {
+			-ms-touch-action: none;
+			/*background: url(./resourceundefined/bg.png);*/
+			background: #000000;
+			padding: 0;
+			border: 0;
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+
+		.deal progress {
+			-webkit-appearance: none;
+		}
+
+		/*.deal ::-webkit-progress-inner-element { }*/
+		.deal ::-webkit-progress-bar {
+			border-radius: 1rem;
+			background: #0e0e0e;
+		}
+
+		.deal ::-webkit-progress-value {
+			background: url(./resourceundefined/tiao.png);
+		}
+
+		.deal ::-moz-progress-bar {
+			background: url(./resourceundefined/tiao.png);
+		}
+
+		.deal ::-ms-fill {
+			background: url(./resourceundefined/tiao.png);
+		}
+	</style>
+
+</head>
+
+<body onunload="closeSocket()">
+	<div style="position: absolute;height: 100%;width: 100%;text-align: center;overflow: hidden" id="loading">
+		<span style="position: absolute;
+					transform: translate(-50%);
+					left: 50%;
+					height: 100%;">
+			<img src="./resourceundefined/loadingbg.png" / style="height: 100%">
+		</span>
+		<div style="height: 25px;
+					position: absolute;
+					width: 90%;
+					bottom: 20%;
+					display: block;
+					transform: translate(-50%,-50%);
+					left: 50%;">
+
+			<span style="position: absolute;
+						/* text-align: center; */
+						/* transform: translateX(-108%); */
+						/* bottom: 20%; */
+						transform: translate(-50%,-50%);
+						left: 50%;
+						max-width: 433px;
+						width: 100%;
+						min-width: 325px;
+						height: 95%;" class="deal">
+				<progress id="progress" value="0" max="100" style="width: 100%;height: 100%;"></progress>
+			</span>
+			<span style="position: absolute;
+						/* text-align: center; */
+						/* bottom: 19.3%; */
+						transform: translate(-50%,-50%);
+						left: 50%;
+						min-width: 325px;
+						max-width: 485px;
+						width: 100%;
+						height: 100%;">
+				<img src="./resourceundefined/kuang.png" style="width: 100%;height: 100%;" />
+			</span>
+			<span style="position: absolute;
+						/* text-align: center; */
+						/* transform: translateX(-108%); */
+					 	bottom: 110%; 
+						transform: translate(-50%,-50%);
+						left: 50%;
+						max-width: 433px;
+						width: 100%;
+						min-width: 325px;
+						height: 95%;">
+				<p style="color: #F7C43D;margin: 0;text-align: left;" id="trptxt">0/100</p>
+			</span>
+			<span style="position: absolute;
+						/* text-align: center; */
+						/* transform: translateX(-108%); */
+						/* bottom: 20%; */
+						transform: translate(-50%,-50%);
+						left: 50%;
+						max-width: 433px;
+						width: 100%;
+						min-width: 325px;
+						height: 95%;">
+				<p style="color: #F7C43D;margin: 0 auto;" id="loadingtxt">0/100</p>
+			</span>
+			<span style="position: absolute;
+						/* text-align: center; */
+						/* transform: translateX(-108%); */
+					 	bottom: -110%; 
+						transform: translate(-50%,-50%);
+						left: 50%;
+						max-width: 433px;
+						width: 100%;
+						min-width: 325px;
+						height: 95%;">
+				<p
+					style="color: #ffffff;margin: 0;text-align: center;font-size: 12px;text-shadow: -1px 1px 0 #000, 1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;">
+					如果您是第一次打开游戏，加载游戏可能会比较大，请耐心等待</p>
+			</span>
+			<span style="position: absolute;
+						/* text-align: center; */
+						/* transform: translateX(-108%); */
+					 	bottom: -560%; 
+						transform: translate(-50%,-50%);
+						left: 50%;
+						max-width: 433px;
+						width: 100%;
+						min-width: 325px;
+						height: 95%;">
+				<p
+					style="color: #ffffff;margin: 0;text-align: center;font-size: 13px;text-shadow: -1px 1px 0 #000, 1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;">
+					抵制不良游戏 拒绝盗版游戏 请注意自我保护</p>
+				<p
+					style="color: #ffffff;margin: 0;text-align: center;font-size: 13px;text-shadow: -1px 1px 0 #000, 1px 1px 0 #000,1px -1px 0 #000,-1px -1px 0 #000;">
+					谨防上当受骗 适度游戏益脑 合理安排时间 享受健康生活</p>
+			</span>
+		</div>
+	</div>
+	<div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main"
+		data-orientation="auto" data-scale-mode="showAll" data-frame-rate="30" data-content-width="600"
+		data-content-height="1204" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"
+		data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+	</div>
+
+	<!-- <script src="./assets/js/custom/index.min.js"></script> -->
+	<script>
+		var paraUrl = location.href;
+		var urlParam = {};
+		paramInit(paraUrl);
+		urlParam['egretWidth'] = '600';
+		urlParam['egretHeight'] = '1204';
+		var localAddress = 'https://back.songkailun.com';
+		window.info = {
+			version: '1.8.2',
+			get_gonggao_address: localAddress + '/gm/index.php?m=ServerInfo&a=game_notice',
+			get_AppInfo_address: localAddress + '/gm/index.php?m=ServerInfo&a=app_edition',
+			get_roomList_address: localAddress + '/gm/index.php?m=ServerInfo&a=server_list',
+			get_login_address: localAddress + '/gm/index.php?m=Regi&a=channel_reg&',
+			get_login_token_address: localAddress + '/gm/index.php?m=Regi&a=check_token&',
+			get_register_address: localAddress + '/gm/index.php?m=Regi&a=index&',
+			getreCharge_address: localAddress + '/gm/index.php?m=Paycc&a=placeorder&platform=',
+			getreCharge2_address: localAddress + '/gm/index.php?m=Payment&a=Placeorder&platform=',
+			getChatControl_address: localAddress + '/gm/index.php?m=Chat&a=chat_controls&',
+			getKeFu_address: 'https://temp-chat.mstatik.com/widget/standalone.html?eid=184645',
+			get_chargePrice: localAddress + '/gm/index.php?m=MoneyConfig&a=money_list',
+			get_dianquan_Address:localAddress+'/gm/index.php?m=Payment&a=payment_point',
+			get_pay_info: localAddress+'/gm/index.php?m=Payment&a=paylist&amount='
+		}
+		// 获取价格表
+		getChargePriceFromServer()
+
+
+		var loadScript = function (list, callback) {
+			var loaded = 0;
+			var loadNext = function () {
+				loadSingleScript(list[loaded], function () {
+					loaded++;
+					if (window.location.search) {
+						showLoadProgress((loaded / list.length) * 30, '(加载基础文件)')
+					} else {
+						showLoadProgress((loaded / list.length) * 100, '(加载基础文件)')
+					}
+					if (loaded >= list.length) {
+						callback();
+					}
+					else {
+						loadNext();
+					}
+				})
+			};
+			loadNext();
+		};
+
+		var loadSingleScript = function (src, callback) {
+			var s = document.createElement('script');
+			s.async = false;
+			s.src = src + '?v=' + info.version;
+			s.addEventListener('load', function () {
+				s.parentNode.removeChild(s);
+				s.removeEventListener('load', arguments.callee, false);
+				callback();
+			}, false);
+			document.body.appendChild(s);
+		};
+
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', './manifest.json?v=' + Math.random(), true);
+		xhr.addEventListener("load", function () {
+			var manifest = JSON.parse(xhr.response);
+			var list = manifest.initial.concat(manifest.game);
+			loadScript(list, function () {
+				/**
+				 * {
+				 * "renderMode":, //Engine rendering mode, "canvas" or "webgl"
+				 * "audioType": 0 //Use the audio type, 0: default, 2: web audio, 3: audio
+				 * "antialias": //Whether the anti-aliasing is enabled in WebGL mode, true: on, false: off, defaults to false
+				 * "retina": //Whether the canvas is based on the devicePixelRatio
+				 * }
+				 **/
+				// egret.runEgret({ renderMode: "webgl", audioType: 0 });
+				// _login()
+				// return
+				if (window.location.search) {
+					_login()
+					this.nativeType = 'web'
+				} else {
+					closeLoadProgress()
+					egret.runEgret({ renderMode: "webgl", audioType: 0 });
+					this.nativeType = 'native'
+				}
+			});
+		});
+		xhr.send(null);
+
+		// window.alert = function (msg, title, callback) {
+		// 	console.log('不弹框')
+		// }
+		function get_pay_info(){
+			return info.get_pay_info
+		}
+		function getNative() {
+			return this.nativeType
+		}
+		// Appfunction
+		function get_AppInfo_address() {
+			return info.get_AppInfo_address
+		}
+		function get_gonggao_address() {
+			return info.get_gonggao_address
+		}
+		function get_roomList_address() {
+			return info.get_roomList_address
+		}
+		function get_login_address() {
+			return info.get_login_address
+		}
+		function get_register_address() {
+			return info.get_register_address
+		}
+		function getVersion() {
+			return info.version;
+		}
+
+		function setChannel(channel) {
+			this.channel = channel
+		}
+		function getChannel() {
+			return this.channel || 'CQ'
+		}
+		function statistics() {
+			// if (this.channel == 'lx') {
+			// 	var _hmt = _hmt || [];
+			// 	var hm = document.createElement('script');
+			// 	hm.src = 'https://hm.baidu.com/hm.js?3b899991c3fa1f777ead47bf4bc45c9b';
+			// 	var s = document.getElementsByTagName('script')[0];
+			// 	s.parentNode.insertBefore(hm, s);
+			// } else {
+			// 	var _hmt = _hmt || [];
+			// 	var hm = document.createElement("script");
+			// 	hm.src = "https://hm.baidu.com/hm.js?2f4d0caff62d3affc9d7ce51c369ca09";
+			// 	var s = document.getElementsByTagName("script")[0];
+			// 	s.parentNode.insertBefore(hm, s);
+			// }
+		}
+
+		function getChargePriceFromServer() {
+			let self = this
+			this.firChargePrice = [];
+			this.secChargePrice = [];
+			this.monthCardPrice = [];
+			var paramObj = {
+				httpUrl: info.get_chargePrice,
+				type: 'get',
+			}
+			httpRequest(paramObj, function (respondDada) {
+				var _data = JSON.parse(respondDada);
+				if (_data.status == 1) {
+					let data = _data.data
+					for (let i = 0; i < data.length; i++) {
+						if (data[i].type == 0) {
+							self.secChargePrice.push(data[i])
+						} else if (data[i].type == 1) {
+							self.firChargePrice.push(data[i])
+						} else if (data[i].type == 2) {
+							self.monthCardPrice.push(data[i])
+						}
+					}
+				} else {
+					alert('获取价格列表失败，请检查网络重新登录')
+				}
+			})
+
+		}
+		function getfirChargePriceInfo() {
+			return this.firChargePrice;
+		}
+		function getsecChargePriceInfo() {
+			for (let i = 0; i < this.secChargePrice.length; i++) {
+				let num = i + 1 > 6 ? 6 : i + 1;
+				this.secChargePrice[i].icon = "new_chongzhi_yuanbao" + num
+			}
+			return this.secChargePrice;
+		}
+		function getmonthCardPriceInfo() {
+			return this.monthCardPrice;
+		}
+
+
+
+
+		function getLoginInfo() {
+			// return {
+			// 	// srvid: 8,
+			// 	// user: 'lx_fd4mksxw',
+			// 	// serverid: 8,
+			// 	// spverify: 'cc17c30cd111c7215fc8f51f8790e0e1',
+			// 	// srvaddr: '47.106.10.149',
+			// 	// srvport: 9004
+
+
+
+			// 	srvid: "5",
+			// 	// user: "lx_smjlrbqs",
+			// 	// spverify: "8037ccea85006fee74f58f86edf1788e",
+
+			// 	user: "lx_fd4mksxw",
+			// 	spverify: "cc17c30cd111c7215fc8f51f8790e0e1",
+			// 	serverid: "5",
+			// 	srvaddr: "47.106.10.149",
+			// 	srvport: "9001"
+			// 	// userID: 211
+			// 	// userName: "恶魔霸气"
+			// 	// roleID: 8060933
+			// }
+			if (this.LoginInfo) {
+				return this.LoginInfo
+			}
+
+			return {
+				srvid: 8,
+				user: '',
+				serverid: 8,
+				spverify: '',
+				srvaddr: '',
+				srvport: 9004
+			}
+		}
+
+		function setLoginInfo(data) {
+			this.LoginInfo = data
+			// return {
+			// 	srvid: 8,
+			// 	user: 'lx_fd4mksxw',
+			// 	serverid: 8,
+			// 	spverify: 'cc17c30cd111c7215fc8f51f8790e0e1',
+			// 	srvaddr: '47.106.10.149',
+			// 	srvport: 9004
+			// }
+		}
+
+
+		function setRoomList(roomListData) {
+			this.roomListData = roomListData
+		}
+
+		function getRoomList() {
+			return this.roomListData;
+		}
+
+		//webFunction
+		function _login() {
+			var isTokenLogin = false
+			var url = decodeURI(window.location.search); //获取url中"?"符后的字串
+			var theRequest = new Object();
+			if (url.indexOf("?") != -1) {
+				var str = url.substr(1);
+				strs = str.split("&");
+				for (var i = 0; i < strs.length; i++) {
+					if (strs[i].split("=")[0] == 'key') {
+						isTokenLogin = true
+					}
+					theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+				}
+			}
+			var token = theRequest['token']
+			var loginInfo = fromCode(token)
+			loginInfo = JSON.parse(loginInfo)
+			this.channel = loginInfo.channel;
+			// var infoTime = Date.now() - loginInfo.time
+			// if (infoTime > 43200000) {
+			//     alert('登录信息失效，请重新登录')
+			//     return;
+			// }
+			console.log('登陆信息 ： ',loginInfo)
+			initLoginData(loginInfo)
+		}
+
+		var fromCode = function (str) {
+			var key = "9873216540AZCDEFGHIJKLMNOPQRSTUVWXYB";
+			var l = key.length;
+			var b, b1, b2, b3, d = 0, s;
+			s = new Array(Math.floor(str.length / 3));
+			b = s.length;
+			for (var i = 0; i < b; i++) {
+				b1 = key.indexOf(str.charAt(d));
+				d++;
+				b2 = key.indexOf(str.charAt(d));
+				d++;
+				b3 = key.indexOf(str.charAt(d));
+				d++;
+				s[i] = b1 * l * l + b2 * l + b3
+			}
+			b = eval("String.fromCharCode(" + s.join(',') + ")");
+			return b;
+		}
+
+		function paramInit(str) {
+			var whIndex = str.indexOf("?");
+			if (whIndex != -1) {
+				var param = str.slice(whIndex + 1).split("&");
+				var strArr;
+				for (var i = 0; i < param.length; i++) {
+					strArr = param[i].split("=");
+					urlParam[strArr[0]] = strArr[1];
+				}
+			}
+		}
+
+		function initLoginData(loginInfo) {
+			this.loginData = []
+			var paramObj = {
+				httpUrl: info.get_roomList_address,
+				type: 'post',
+			}
+			httpRequest(paramObj, function (respondDada) {
+				// self.loading.hide();
+				var _data = JSON.parse(respondDada);
+				if (_data.code == 0) {
+					for (var i = 0; i < _data.data.length; i++) {
+						if (_data.data[i].is_test == 2) {
+							var _info = {
+								serverId: _data.data[i].server_id,
+								serverName: _data.data[i].server_name,
+								serverPort: _data.data[i].server_port,
+								address: _data.data[i].database_host,
+								id: _data.data.length - i,
+							}
+							this.loginData.push(_info)
+						}
+					}
+					// console.log(this.loginData)
+					var paramObj2 = {
+						httpUrl: info.get_login_token_address,
+						type: 'post',
+						data: {
+							token: loginInfo.token,
+							channel: loginInfo.channel,
+							serverid: loginInfo.serverid,
+							userid: loginInfo.userid,
+						}
+					}
+					httpRequest(paramObj2, function (respondDada) {
+						// self.loading.hide();
+						var _data = JSON.parse(respondDada);
+						if (_data.status == 1) {
+							var address = '';
+							var serverPort = '';
+							for (var i = 0; i < this.loginData.length; i++) {
+								if (this.loginData[i].serverId == _data.data.serverid) {
+									// return this.loginData[i].serverName
+									address = this.loginData[i].address;
+									serverPort = this.loginData[i].serverPort;
+								}
+							}
+							// username":"zhousi_333333333","password":"77c9749b451ab8c713c48037ddfbb2c4","serverid":"16
+							var arr = window.location.href.split('?');
+							var ar = arr[0];
+							var paraUrl = ar
+								+ "?srvid=" + _data.data.serverid
+								+ "&user=" + _data.data.username
+								+ "&spverify=" + _data.data.password
+								+ "&serverid=" + _data.data.serverid
+								+ "&srvaddr=" + address
+								+ "&srvport=" + serverPort;
+							start(paraUrl);
+						} else {
+							alert(_data.info)
+						}
+					})
+
+				}
+			})
+		}
+
+		function start(param) {
+			if (param) {
+				paramInit(param);
+				paraUrl = param;
+			}
+			egret.runEgret({ renderMode: urlParam['renderMode'] });
+			egret.MainContext.instance.stage.dirtyRegionPolicy = urlParam['dirty'];
+		}
+
+		function showLoadProgress(progress, txt) {
+			let self = this
+			clearInterval(this.timer)
+			document.getElementById("trptxt").innerText = txt;
+			document.getElementById("loadingtxt").innerText = parseInt(progress) + '/100';
+			document.getElementById("progress").value = progress;
+			this.timer = setInterval(function () {
+				if (progress >= 99) {
+					clearInterval(self.timer)
+					return;
+				}
+				if (parseInt(document.getElementById("progress").value) >= progress) {
+					document.getElementById("progress").value = parseInt(document.getElementById("progress").value) + 1
+					document.getElementById("loadingtxt").innerText = document.getElementById("progress").value + '/100';
+				} else {
+					document.getElementById("progress").value = progress;
+					document.getElementById("loadingtxt").innerText = parseInt(progress) + '/100';
+				}
+
+			}, 1000)
+		}
+
+		function closeLoadProgress() {
+			document.getElementById("loading").style.display = "none";
+		}
+		function isFullScree() {
+			return document.isFullScreen || document.mozIsFullScreen || document.webkitIsFullScreen
+		}
+		function FullScree() {
+			var el = document.documentElement;
+			var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+			if (typeof rfs != "undefined" && rfs) {
+				rfs.call(el);
+			};
+		}
+
+
+
+		// common
+
+		function get_dianquan_Address() {
+			return info.get_dianquan_Address
+		}
+		function getChargeUrl_2() {
+			return info.getreCharge2_address + this.channel;
+		}
+		function getChargeUrl() {
+			return info.getreCharge2_address + this.channel;
+		}
+		function getChatControlUrl() {
+			return info.getChatControl_address;
+		}
+		function getkefuUrl() {
+			return info.getKeFu_address;
+		}
+
+		//1001 1002 1003 1004 大帝1服 大帝5服 大帝9服 大帝12服
+		function getServerName(id) {
+			if (this.loginData) {
+				for (var i = 0; i < this.loginData.length; i++) {
+					if (this.loginData[i].serverId == id) {
+						let _id = this.loginData[i].id
+						switch (id) {
+							case 1005:
+								_id = 1
+								break;
+							case 1006:
+								_id = 9
+								break;
+							case 1007:
+								_id = 14
+								break;
+							case 1008:
+								_id = 16
+								break
+
+						}
+						return 's' + _id
+					}
+				}
+			} else {
+				for (let i = 0; i < this.roomListData.length; i++) {
+					if (this.roomListData.id == id) {
+						let _id = this.roomListData.number
+						switch (id) {
+							case 1005:
+								_id = 1
+								break;
+							case 1006:
+								_id = 9
+								break;
+							case 1007:
+								_id = 14
+								break;
+							case 1008:
+								_id = 16
+								break
+
+						}
+						return 's' + _id
+					}
+				}
+			}
+			return ''
+		}
+
+
+		function isSafari() {
+			if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+				return true
+			} else {
+				return false
+			}
+		}
+		function showRecharge(payItems) {
+			// console.log('这里吊起支付！！！')
+			// console.log(payItems)
+		}
+		function showQrCode(use) {
+		}
+
+		function connectError() {
+		}
+
+		function closeSocket() {
+			Main.closesocket();
+		}
+
+		function checkAWY() {
+
+		}
+		function reportSDK(str) {
+
+		}
+		function showGame() {
+
+		}
+		function showQRCode() {
+
+		}
+		function isFocus() {
+
+		}
+		function isShare() {
+
+		}
+		function roleUp() {
+
+		}
+		function enterGame() {
+
+		}
+		function createRole() {
+
+		}
+		function getVipInfo() {
+
+		}
+		function isShowGameDesktop() {
+		}
+		function saveGameDesktop() {
+		}
+		function getClientVersion(callback) {
+			if (callback) callback(0);
+		}
+
+		function httpRequest(paramObj, fun, errFun) {
+			var xmlhttp = null;
+			/*创建XMLHttpRequest对象，
+			 *老版本的 Internet Explorer（IE5 和 IE6）使用 ActiveX 对象：new ActiveXObject("Microsoft.XMLHTTP")
+			 * */
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			} else if (window.ActiveXObject) {
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			/*判断是否支持请求*/
+			if (xmlhttp == null) {
+				alert('你的浏览器不支持XMLHttp');
+				return;
+			}
+			/*请求方式，并且转换为大写*/
+			var httpType = (paramObj.type || 'GET').toUpperCase();
+			/*数据类型*/
+			var dataType = paramObj.dataType || 'json';
+			/*请求接口*/
+			var httpUrl = paramObj.httpUrl || '';
+			/*是否异步请求*/
+			var async = paramObj.async || true;
+			/*请求参数--post请求参数格式为：foo=bar&lorem=ipsum*/
+			var paramData = paramObj.data || [];
+			var requestData = '';
+			for (var name in paramData) {
+				requestData += name + '=' + paramData[name] + '&';
+			}
+			requestData = requestData == '' ? '' : requestData.substring(0, requestData.length - 1);
+
+			/*请求接收*/
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					/*成功回调函数*/
+					fun(xmlhttp.responseText);
+				} else {
+					/*失败回调函数*/
+					errFun;
+				}
+			}
+
+			/*接口连接，先判断连接类型是post还是get*/
+			if (httpType == 'GET') {
+				xmlhttp.open("GET", httpUrl, async);
+				xmlhttp.send(null);
+			} else if (httpType == 'POST') {
+				httpUrl += requestData;
+				//  httpUrl =  'http://ezz25.com/gm/?m=Regi&a=index&serverid=80&name=test123465&password=123456&ID_card=2121212342342'
+				xmlhttp.open("POST", httpUrl, async);
+				//发送合适的请求头信息
+				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xmlhttp.send(requestData);
+			}
+		}
+		var ver = "0.12";
+		var verUrl = "http://nnqp.ruida2017.com/game/ver.txt?ver=";
+
+	</script>
+
+</body>

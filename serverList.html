@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>测试用登录页</title>
+	<!--防止index.html被浏览器缓存--begin-->
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="0">
+	<!--防止index.html被浏览器缓存--over-->
+
+	<link href="favicon.ico" rel="shortcut icon" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="full-screen" content="true" />
+	<meta name="screen-orientation" content="portrait" />
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="360-fullscreen" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<script src="./assets/js/common/md5.min.js"></script>
+	<style>
+		html,
+		body {
+			-ms-touch-action: none;
+			background: #FFFFFF;
+			padding: 0;
+			border: 0;
+			margin: 0;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<font size="4">服务器</font>
+		<br>
+		<select id="serverSelect">
+			<option value='{"ip":"192.168.50.71","id":1,"port":9001}'>本地服 </option>
+			<option value='{"ip":"47.90.90.194","id":1,"port":9001}'>内测服1 </option>
+			<option value='{"ip":"47.90.90.194","id":2,"port":9002}'>内测服2 </option>
+			<option value='{"ip":"47.106.10.149","id":1001,"port":9001}'>大帝1-4 </option>
+			<option value='{"ip":"47.106.10.149","id":1002,"port":9002}'>大帝5-8 </option>
+			<option value='{"ip":"47.106.10.149","id":1003,"port":9003}'>大帝9-11</option>
+			<option value='{"ip":"47.106.10.149","id":1004,"port":9004}'>大帝12-13 </option>
+			<option value='{"ip":"47.244.158.134","id":18,"port":9006}'>大帝14 </option>
+			<option value='{"ip":"47.244.158.134","id":19,"port":9007}'>大帝15 </option>
+			<option value='{"ip":"47.244.158.134","id":20,"port":9008}'>大帝16 </option>
+			<option value='{"ip":"47.244.158.134","id":21,"port":9011}'>大帝17 </option>
+			<option value='{"ip":"47.90.90.194","id":5,"port":9003}'>策划1</option>
+      		<option value='{"ip":"47.90.90.194","id":6,"port":9004}'>策划2</option>
+			<!-- <option value='{"ip":"47.90.90.194","id":6001,"port":9007}'>战斗服</option> -->
+		</select>
+		<br><br>
+		<font size="4">账号</font>
+		<input id="acount" type="text" size="4" value="cehua" style="width:500px;"></input>
+		<br><br>
+		<font size="4">密码</font>
+		<input id="exdata" type="text" size="4" style="width:500px;"></input>
+		<br><br>
+		<button type="button" onclick="javascript:button_onclick();">点击登陆</button>
+	</div>
+
+
+	<script>
+		document.getElementById("serverSelect").selectedIndex = +localStorage.getItem("selectedIndex1") || 0;
+		document.getElementById("exdata").value = localStorage.getItem("exdata") || "";
+		document.getElementById("acount").value = localStorage.getItem("acount") || "";
+		function button_onclick() {
+	
+			launchFullscreen()
+			var acount = document.getElementById("acount").value
+			var server = JSON.parse(document.getElementById("serverSelect").value);
+			var exdata = document.getElementById("exdata").value;
+
+			localStorage.setItem("exdata", exdata);
+			localStorage.setItem("acount", acount);
+			localStorage.setItem("selectedIndex1", document.getElementById("serverSelect").selectedIndex);
+			var arr = window.location.href.split('?');
+			var ar = arr[0];
+			console.log(hex_md5(exdata) )
+			var paraUrl = ar
+				+ "?srvid=" + server.id
+				+ "&user=" + acount
+				+ "&serverid=" + server.id
+				+ "&spverify=" + hex_md5(exdata)
+				+ "&srvaddr=" + server.ip
+				+ "&srvport=" + server.port
+			var data = {};
+			data.id = "eE";
+			data.urlParam = paraUrl;
+			console.log(data)
+			window.parent.postMessage(data, "*");
+		}
+		function launchFullscreen() {
+			var ua = navigator.userAgent.toLowerCase();
+			if (ua.indexOf("windows") > 0) {
+				return
+			}
+			var el = document.documentElement;
+			var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullscreen;
+			if (typeof rfs != "undefined" && rfs) {
+				rfs.call(el);
+			};
+		}
+
+		/*请求参数*/
+		var paramObj = {
+			httpUrl: 'http://47.75.114.116/gm/',
+			type: 'post',
+			data: {
+				name: 'aaa123456',
+				serverid: '1',
+				password:'123456',
+				ID_card:'110',
+				channel:'abc'
+			}
+		}
+		/*请求调用*/
+		// httpRequest(paramObj, function (respondDada) {
+		// 	//这里编写成功的回调函数
+		// 	console.log(respondDada)
+		// }, function () {
+		// 	alert('网络错误')
+		// });
+
+
+		function httpRequest(paramObj, fun, errFun) {
+			var xmlhttp = null;
+			/*创建XMLHttpRequest对象，
+			 *老版本的 Internet Explorer（IE5 和 IE6）使用 ActiveX 对象：new ActiveXObject("Microsoft.XMLHTTP")
+			 * */
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			} else if (window.ActiveXObject) {
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			/*判断是否支持请求*/
+			if (xmlhttp == null) {
+				alert('你的浏览器不支持XMLHttp');
+				return;
+			}
+			/*请求方式，并且转换为大写*/
+			var httpType = (paramObj.type || 'GET').toUpperCase();
+			/*数据类型*/
+			var dataType = paramObj.dataType || 'json';
+			/*请求接口*/
+			var httpUrl = paramObj.httpUrl || '';
+			/*是否异步请求*/
+			var async = paramObj.async || true;
+			/*请求参数--post请求参数格式为：foo=bar&lorem=ipsum*/
+			var paramData = paramObj.data || [];
+			var requestData = '';
+			for (var name in paramData) {
+				requestData += name + '=' + paramData[name] + '&';
+			}
+			requestData = requestData == '' ? '' : requestData.substring(0, requestData.length - 1);
+			console.log(requestData)
+
+			/*请求接收*/
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					/*成功回调函数*/
+					fun(xmlhttp.responseText);
+				} else {
+					/*失败回调函数*/
+					errFun;
+				}
+			}
+
+			/*接口连接，先判断连接类型是post还是get*/
+			if (httpType == 'GET') {
+				xmlhttp.open("GET", httpUrl, async);
+				xmlhttp.send(null);
+			} else if (httpType == 'POST') {
+				xmlhttp.open("POST", httpUrl, async);
+				//发送合适的请求头信息
+				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				xmlhttp.send(requestData);
+			}
+		}
+
+
+
+	</script>
+</body>

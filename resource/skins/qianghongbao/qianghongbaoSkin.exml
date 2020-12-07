@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="qianghongbaoSkin" width="405" height="599" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*"  >
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<e:Group id="qianghongbao" horizontalCenter="0" verticalCenter="1" visible="false">
+		<e:Image id="topImg" source="hongbao_top_png" height="373" y="2" horizontalCenter="0"/>
+		<e:Image id="downImg" source="hongbao_bottom_png" y="322" height="187" horizontalCenter="0"/>
+		<e:Button id="hbbtn" label="Button" y="299" skinName="Btn0Skin" icon="hongbaobtn_png" x="118"/>
+		<e:Image id="hhbtnlabel" y="351" source="qianghongbao" touchEnabled="false" x="130"/>
+		<e:Image source="new_icon_btn2_json.qianghongbao_img_png" x="12" y="207" anchorOffsetX="0" width="345" anchorOffsetY="0" height="76"/>
+	</e:Group>
+	<e:Group id="showhongbao" horizontalCenter="0" verticalCenter="0" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Image source="hongbao_under_png" width="365" height="510" verticalCenter="0.5" horizontalCenter="-1"/>
+		<e:Image id="speakbg" width="280" source="xn_hongbaoUnder" anchorOffsetY="0" scale9Grid="3,0,6,141" height="142" horizontalCenter="10.5" verticalCenter="175"/>
+	
+
+		<e:Label id="noHongbao" text="未到红包领取时间" size="17" textAlign="left" textColor="0xF7B922" bold="true" horizontalCenter="8.5" verticalCenter="-224.5" visible="false"/>
+		<e:Label text="距离下次可抢：" size="17" textAlign="left" bold="true" textColor="0xf2d598" horizontalCenter="-121.5" verticalCenter="275"/>
+		<e:Label text="今日可抢：" size="17" textColor="0xF2D598" textAlign="left" bold="true" horizontalCenter="101" verticalCenter="275"/>
+		<e:Label id="kqTime" text="" size="17" textAlign="left" bold="true" textColor="0x5fff0a" horizontalCenter="-27.5" verticalCenter="274.5"/>
+		<e:Label id="hongbaoNum" text="" size="17" textAlign="left" bold="true" textColor="0x37f707" horizontalCenter="152.5" verticalCenter="275.5"/>
+
+
+
+
+
+
+
+
+		<e:Group id="hasHongbao" horizontalCenter="0" verticalCenter="25.5">
+			<e:Label text="本次红包领取" size="17" textAlign="left" textColor="0xf7b922" bold="true" horizontalCenter="0" verticalCenter="-249.5"/>
+			<e:Label id="yuanbao1" text="1000" size="31" textAlign="right" bold="true" textColor="0xf2cea2" horizontalCenter="-23" verticalCenter="-200.5"/>
+			<e:Label text="元宝" size="17" textAlign="left" bold="true" textColor="0xf7e2a5" horizontalCenter="42.5" verticalCenter="-200.5"/>
+			<e:Label text="任意充值可额外领取" size="17" textColor="0xF7B922" textAlign="left" bold="true" horizontalCenter="0" verticalCenter="-73.5"/>
+			<e:Label id="yuanbao2" text="1000" size="31" bold="true" textColor="0x5df702" horizontalCenter="-30" verticalCenter="-26.5"/>
+			<e:Label text="元宝" size="17" textColor="0xF7E2A5" textAlign="left" bold="true" horizontalCenter="44" verticalCenter="-24.5"/>
+			<e:Button id="btn1" label="额外领取" skinName="Btn16Skin" horizontalCenter="3.5" verticalCenter="33" x="111" y="272" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Scroller id="scroller" width="275" horizontalCenter="10" height="135" anchorOffsetX="0" anchorOffsetY="0" verticalCenter="174.5">
+			<e:List id="list" x="1" y="3" anchorOffsetX="0" width="276" height="35" itemRendererSkinName="QHBItemSkin">
+			<e:layout>
+				<e:VerticalLayout gap="5" paddingTop="2"/>
+			</e:layout>
+			</e:List>
+		</e:Scroller>
+	</e:Group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+</e:Skin>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="BtnTab0Skin" states="up,down,disabled" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="120" height="48" width.down="120" width.up="120" height.up="48" height.down="48">
+	<e:Image  y.disabled="5" touchEnabled="false" bottom.down="0" x.down="0" x.up="0" y.up="0" source.down="new_duanzao_btn2normal" visible.down="false" width.up="130" height.up="50" scale9Grid="19,6,50,18" left="0" right="0" top="-1" bottom="-7" source.up="new_duanzao_btn2normal" anchorOffsetY="0" source="newDuanzao_json.new_duanzao_btn2normal"/>
+	<e:Image y.disabled="-1" y.down="0" x.up="0" bottom.up="0" visible.disabled="false" x.down="0" touchEnabled="false" source.up="new_duanzao_btn2" visible.up="false" left="0" right="0" top="-15" bottom="-8" source.down="new_duanzao_btn2" source="new_duanzao_btn2" height="68" anchorOffsetY="0" scale9Grid="0,20,117,39"/>
+	<e:Label id="labelDisplay" size="20" x.up="5" x.down="6" touchEnabled="false" y.down="-1" x.disabled="8" y.disabled="1"  horizontalCenter.disabled="0" text="{data}" bold="true" horizontalCenter="0" textColor="0xffd97f" textColor.disabled="0x8e8e8e" textColor.down="0xffd97f" textColor.up="0x827057" verticalCenter.up="-4" verticalCenter.down="-4" verticalCenter="0" verticalAlign="middle" textAlign="center"/>
+</e:Skin>

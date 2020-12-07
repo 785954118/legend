@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="FuliMainSkin" width="580" height="930" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.6"/>
+	<e:Image top="0" bottom="0" source="tongyongmianbanbg2" width="580" horizontalCenter="0" scale9Grid="15,12,2,3" visible="false"/>
+	<e:Image source="tongyongmianbanbg" scale9Grid="10,9,27,30" width="570" horizontalCenter="0" top="44" bottom="120" visible="false"/>
+	<e:Image y="99" source="teshuwenzibg2" scaleY="-1" horizontalCenter="0" width="560" visible="false"/>
+	<e:Group width="556" horizontalCenter="0" bottom="58" visible="false">
+		<e:Image source="tongyong2_json.bantoumingkuang4" x="0" top="0" bottom="0" width="278" height="90"/>
+		<e:Image source="tongyong2_json.bantoumingkuang4" scaleX="-1" right="0" top="0" bottom="0" width="278" height="90"/>
+	</e:Group>
+	<ns1:BaseComponent id="roleSelect" y="0" skinName="RoleSelectPanelSkin" className="RoleSelectPanel"  width="580" horizontalCenter="0" currentState="nohead"/>
+	<e:Image source="new_shangcheng_bg_png" anchorOffsetY="0" scale9Grid="74,99,445,601" top="32" bottom="213" width="601" horizontalCenter="0.5"/>
+	<e:Image source="new_fuli_jihuoma_diwen2_png" anchorOffsetY="0" top="61" bottom="229" width="550" horizontalCenter="0"/>
+	<e:Image source="new_fuli_jihuoma_diwen1_png" top="84" bottom="238" width="520" horizontalCenter="1"/>
+	<e:Image source="new_fuli_json.new_fuli_denglujiangli_bg3" anchorOffsetX="0" width="579" horizontalCenter="-1.5" bottom="110"/>
+	<e:Image width="570" horizontalCenter="0" source="tongyongmianbanbg" scale9Grid="19,12,14,25" top="44" bottom="120" visible="false"/>
+	<e:Image source="fulibiaoti" y="0" horizontalCenter="-164" visible="false"/>
+	<e:Image horizontalCenter="-176" source="new_fuli_denglujiangli_title" top="0"/>
+	<e:Button y="58" skinName="Btn0Skin" label="按钮" id="closeBtn0" horizontalCenter="210" visible="false"/>
+
+	<e:Group id="dinghong" width="556" height="92" bottom="128" horizontalCenter="-1" visible="false">
+		<e:Image x="0" top="0" bottom="0" source="bantoumingkuang3" />
+		<e:Image scaleX="-1" top="0" bottom="0" source="bantoumingkuang3" right="0" />
+	</e:Group>
+	<e:Scroller id="listBar" horizontalCenter="0.5" height="106" bottom="121" width="459" anchorOffsetX="0" anchorOffsetY="0">
+		<e:List id="iconList" y="1" itemRendererSkinName="ActBtnSkin" horizontalCenter="0" height="106" anchorOffsetY="0" anchorOffsetX="0" width="504">
+		<e:layout>
+			<e:HorizontalLayout gap="10" paddingLeft="0"/>
+		</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Group id="rightGroup" horizontalCenter="255.5" bottom="150" anchorOffsetY="0" height="48" anchorOffsetX="0" width="45">
+		<e:Button id="rightBtn" label="按钮" icon="jiantouxuan" skinName="Btn0Skin" scaleX="-1" x="49" y="0"/>
+		<e:Image id="rightRed" x="525" y="740" source="zjmhongdian" touchEnabled="false" visible="false"/>
+	</e:Group>
+
+	<e:Group id="leftGroup" horizontalCenter="-252.5" bottom="150">
+		<e:Button id="leftBtn" label="按钮" icon="jiantouxuan" skinName="Btn0Skin" x="0" y="0"/>
+		<e:Image id="rightRed0" x="-8" y="-5" source="zjmhongdian" touchEnabled="false" visible="false"/>
+	</e:Group>
+	<e:Group id="info" anchorOffsetX="0" anchorOffsetY="0" top="97" left="41" bottom="246" right="40">
+	</e:Group>
+	<e:Group top="20" horizontalCenter="0" bottom="118" width="570" touchChildren="false" touchEnabled="false" visible="false">
+		<e:Image source="fulikuang1" y="0" horizontalCenter="0"/>
+		<e:Image y="26" source="fulikuang2" x="0"/>
+		<e:Image source="fulikuang2" y="27" scaleX="-1" right="0"/>
+		<e:Image source="fulikuang4_png" scale9Grid="4,209,31,36" x="-6" top="69" bottom="0"/>
+		<e:Image source="fulikuang4_png" scale9Grid="4,209,31,36" top="69" bottom="0" right="-6" scaleX="-1"/>
+		<e:Image source="fulikuang3" scale9Grid="33,2,4,12" x="32" width="253" bottom="3"/>
+		<e:Image source="fulikuang3" width="253" bottom="3" right="32" scale9Grid="35,2,3,12" scaleX="-1"/>
+		<e:Image scale9Grid="33,2,4,12" x="0" bottom="-22" source="fulikuang5"/>
+		<e:Image scale9Grid="33,2,4,12" bottom="-6" source="fulikuang6" right="0"/>
+	</e:Group>
+	<e:Button id="closeBtn" label="按钮" skinName="Btn0Skin" icon="chatclose" y="46" scaleX="0.8" scaleY="0.8" horizontalCenter="266"/>
+</e:Skin>

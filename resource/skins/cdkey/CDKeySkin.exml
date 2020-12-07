@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CDkeySkin" width="540" height="596" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="540" height="358" source="cdkeybg_png" horizontalCenter="0" visible="false"/>
+	<e:Image source="new_fuli_jihuoma_bg_png" horizontalCenter="5" anchorOffsetY="0" height="592" scale9Grid="5,567,537,124" verticalCenter="0"/>
+	<e:Image width="430" height="50" horizontalCenter="0" scale9Grid="4,7,17,14" source="new_fuli_jihuoma_diwen1_png" verticalCenter="147"/>
+	<e:Button id="sendBtn" skinName="Btn1Skin" width="156" height="60" label="领取奖励" horizontalCenter="0" verticalCenter="228"/>
+	<e:TextInput id="input" text="" width="410" height="40" horizontalCenter="0" verticalCenter="147"/>
+	<e:Image source="new_fuli_json.new_fuli_jihuoma_label1" horizontalCenter="61.5" verticalCenter="-49.5"/>
+	<e:Image source="new_fuli_json.new_fuli_jihuoma_label2" horizontalCenter="93" verticalCenter="-133.5"/>
+</e:Skin>
